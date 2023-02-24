@@ -90,10 +90,17 @@ button:hover {
     padding-top: 10px;
 }
 
-.drag-zone {
-    background-color: #f1c40f;
-    height: 250px;
-    margin: 10px;
+
+.design-flex {
+    display: flex;;
+    justify-content: center;
 }
 
+.drag-item{
+    display: inline;
+}
 
+.template{
+    height: 250px;
+    width: auto;
+}
