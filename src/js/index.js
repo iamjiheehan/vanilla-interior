@@ -30,14 +30,13 @@ const router = async () => {
         };
     }
     const pages = new match.route.pages();
-
+    
+    
     document.querySelector("#app").innerHTML = await pages.getHTML();
+    await pages.executeScript();
 };
 
 window.addEventListener("popstate", router);
-
-
-
 
 document.addEventListener("DOMContentLoaded", ()=> {
     document.body.addEventListener("click", e => {

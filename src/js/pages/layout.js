@@ -8,5 +8,10 @@ export default class {
     async(url) {
         return "";
     }
+
+    async executeViewScript(){
+        return "";
+
+    }
 }
 
