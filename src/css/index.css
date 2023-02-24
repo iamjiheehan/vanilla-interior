@@ -1,3 +1,8 @@
+@font-face {
+    font-family : 'malgunbd';
+    src : url(./font/malgunbd.ttf)
+}
+
 body {
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
@@ -24,14 +29,71 @@ body {
 
 .nav__link:hover {
     background: rgba(255, 255, 255, 0.05);
+    color: burlywood;
 }
 
 #app {
-    margin: 2em;
+    /* margin: 2em; */
     line-height: 1.5;
     font-weight: 500;
+    text-align: center;
+    
 }
 
-a {
-    color: #009579;
+nav img {
+    width: 80%;
+    display: block;
+    margin: 18px auto 15px auto;
 }
+
+h1 {
+    text-align: center;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: #f1c40f;
+    padding: 5px 15px;
+    font-family: 'malgunbd';
+    color: #222222;
+}
+
+button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+.home-background {
+    background-color: #222222;
+    background-image: url(../img/sofa.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    height: 100vh;
+    position: relative;
+
+}
+
+.home-box {
+    background-color: rgba(255, 255, 255, 0.623);
+    padding: 20px 100px;
+    text-align: right;
+    position: absolute;
+    top: 15%;
+    right: 10%;
+}
+
+
+.design-img-wrap {
+    padding-top: 10px;
+}
+
+.drag-box {
+    background-color: #f1c40f;
+    height: 250px;
+    margin: 10px;
+}
+
+

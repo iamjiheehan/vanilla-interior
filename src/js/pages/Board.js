@@ -5,7 +5,7 @@ export default class extends layout {
         super();
         this.setTitle("Board");
     }
-    async getHtml() {
+    async getHTML() {
         return `
             <h1>Boards!!!!!!!!!이거 실화냐?!!!!!</h1>
             <p>You are viewing Boards</p>
@@ -14,4 +14,8 @@ export default class extends layout {
             </p>
         `;
     }
+
+
+
+
 }

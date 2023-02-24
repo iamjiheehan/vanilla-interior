@@ -5,13 +5,20 @@ export default class extends layout {
         super();
         this.setTitle("Home");
     }
-    async getHtml() {
+    async getHTML() {
         return `
-            <h1>HOME!!!!!!!!!!!!!!</h1>
-            <p>You are viewing Home</p>
-            <p>
-                <a href = "/home" data-link> View recent Home</a>
-            </p>
+            <div class="home-background">
+                <div class="home-box">
+                    <h1>Make room for better living</h1>
+                    <h1>We Make Your Home Better</h1>
+                    <p>Stunning interior design services, now within reach</p>
+                    <button>Find your style</button>
+                    <p>
+                        <a href = "#" Find your style></a>
+                    </p>
+                </div>
+                </div>
+            </div>
         `;
     }
 }
