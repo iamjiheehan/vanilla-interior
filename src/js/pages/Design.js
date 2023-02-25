@@ -23,7 +23,7 @@ export default class extends layout {
                     </div>
                     <div class="design__drag-zone design__drag-border">
                         <div class = "design__drag-zone-text">
-                            <h2><span>✔</span> 마음에 드는 스타일을 여기에 넣어주세요</h2>
+                            <h2><span>✔</span> 마음에 드는 스타일 3가지를 여기에 넣어주세요</h2>
                             <button class="design__btn-reset" onclick="location.reload()">Reset</button>
                         </div>
                     </div>
@@ -42,11 +42,11 @@ export default class extends layout {
         
             draggables.forEach(draggable => {
                 draggable.addEventListener('dragstart', () => {
-                    draggable.classList.add('dragging')
+                    draggable.classList.add('dragging');
                 })
 
                 draggable.addEventListener('dragend', () => {
-                    draggable.classList.remove('dragging')
+                    draggable.classList.remove('dragging');
                 })
             })
         
@@ -55,10 +55,12 @@ export default class extends layout {
                     e.preventDefault()
                     const afterElement = getDragAfterElement(container, e.clientY)
                     const draggable = document.querySelector('.dragging')
-                    if (afterElement == null) {
-                    container.appendChild(draggable)
-                    } else {
-                    container.insertBefore(draggable, afterElement)
+                    const count = container.querySelectorAll('.design__drag-item').length;
+                    const isAlreadyInContainer = container.contains(draggable);
+                    if (!isAlreadyInContainer && afterElement == null && count < 3) {
+                    container.appendChild(draggable);
+                    } else if (!isAlreadyInContainer && count < 3) {
+                    item = container.insertBefore(draggable, afterElement);
                     }
                 })
                 })
