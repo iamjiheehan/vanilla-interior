@@ -54,9 +54,11 @@ button {
     border: none;
     border-radius: 20px;
     background-color: #f1c40f;
-    padding: 5px 15px;
+    padding: 10px 15px;
     font-family: 'malgunbd';
     color: #222222;
+    font-size: 15px;
+    line-height: 15px;
 }
 
 button:hover {
@@ -85,22 +87,70 @@ button:hover {
     right: 10%;
 }
 
-
-.design-img-wrap {
-    padding-top: 10px;
+.design h1 {
+    background-color: #222222;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: rgba(255, 255, 255, 0.788);
 }
 
+.design__btn-wrap {
+    background-color: #222222;
+    padding: 20px;
+}
 
-.design-flex {
-    display: flex;;
+.design__drag-item {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+    max-width: 20%;
+    flex-basis: 20%;
+}
+
+.design__drag-item.dragging {
+    opacity: .5;
+}
+
+.design__drag-zone {
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    background-color: #222222;
+    padding: 2rem;
+    position: relative;
 }
 
-.drag-item{
-    display: inline;
+.design__drag-zone img {
+    max-width: 20%;
+    flex-basis: 20%;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+
 }
 
-.template{
-    height: 250px;
-    width: auto;
+
+.design__drag-zone-text h2 {
+    color: white;
+}
+
+.design__drag-zone-text span {
+    color: #2ecc71;
+}
+
+.design__drag-zone-text {
+    width: 100%;
+}
+
+.design__drag-border{
+    border: 10px solid white;
+    border-style: dashed;
+    padding: 2rem;
+}
+
+.design__btn-reset{
+    margin-bottom: 2rem;
 }

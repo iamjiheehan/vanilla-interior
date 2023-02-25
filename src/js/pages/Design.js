@@ -9,67 +9,73 @@ export default class extends layout {
     async getHTML() {
         return `
             <div class="design">
-            <h1>선호하는 스타일을 알려주세요</h1>
-            <p>✔ 2개 이상 골라주세요</p>
-            <p>✔ 마음에 드는 스타일을 박스안에 넣어주세요</p>
-            <div class="design-img-wrap"> 
-            <div class="drag-zone">
-                <img class="drag-item" id="1" draggable="true" src="/src/img/design-1.jpg" alt="Bohemian">
-                <img class="drag-item" id="2" draggable="true" src="/src/img/design-2.jpg" alt="Mid Century Modern">
-                <img class="drag-item" id="3" draggable="true" src="/src/img/design-3.jpg" alt="Scandinavian">
-                <img class="drag-item" id="4" draggable="true" src="/src/img/design-4.jpg" alt="Industrial">
-                <img class="drag-item" id="5" draggable="true" src="/src/img/design-5.jpg" alt="Preppy">
-                <img class="drag-item" id="6" draggable="true" src="/src/img/design-6.jpg" alt="Rustic">
-                <img class="drag-item" id="7" draggable="true" src="/src/img/design-7.jpg" alt="Minimal">
-                <img class="drag-item" id="8" draggable="true" src="/src/img/design-8.jpg" alt="Glam">
+                <h1>선호하는 스타일을 알려주세요</h1>
+                <div class="design__img-wrap"> 
+                    <div class="design__drag-zone">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-1.jpg" alt="Bohemian">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-2.jpg" alt="Mid Century Modern">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-3.jpg" alt="Scandinavian">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-4.jpg" alt="Industrial">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-5.jpg" alt="Preppy">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-6.jpg" alt="Rustic">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-7.jpg" alt="Minimal">
+                        <img class="design__drag-item" draggable="true" src="/src/img/design-8.jpg" alt="Glam">
+                    </div>
+                    <div class="design__drag-zone design__drag-border">
+                        <div class = "design__drag-zone-text">
+                            <h2><span>✔</span> 마음에 드는 스타일을 여기에 넣어주세요</h2>
+                            <button class="design__btn-reset" onclick="location.reload()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="design__btn-wrap">
+                    <button class="design__btn">다음 페이지</button>
+                </div>
             </div>
-            <div class="drag-zone">
-                <div class="template"></div>
-            </div>
-            </div>
-        </div>
         `;
     }
     executeScript() {
             console.log("hello");
+
+            const draggables = document.querySelectorAll('.design__drag-item')
+            const containers = document.querySelectorAll('.design__drag-zone')
         
-            document.querySelectorAll(".drag-item").forEach(item => {
-                item.addEventListener("dragstart", e => {
-                    e.dataTransfer.setData("text/plain", e.target.src);
-                    console.log("Drag Start");
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', () => {
+                    draggable.classList.add('dragging')
                 })
-            });
-        
-            document.querySelectorAll(".drag-zone").forEach(item => {
-                item.addEventListener("dragover", e => {
-                    e.preventDefault();
-                    e.dataTransfer.dropEffect = "copy";
-                    console.log("Drag Over");
+
+                draggable.addEventListener('dragend', () => {
+                    draggable.classList.remove('dragging')
                 })
-        
-                item.addEventListener("dragenter", e => {
-                    item.classList.add("dragging")
-                    console.log("Drag Enter");
-                })
-        
-                item.addEventListener("dragleave", e => {
-                    item.classList.remove("dragging")
-                    console.log("Drag Leave");
-                })
-        
-                item.addEventListener("drop", e => {
-                    if(item > 4){
-                        e.preventDefault();
-                    } else {
-                        let data = e.dataTransfer.getData('text/plain');
-                        console.log("Drop: ", data);
-                        let img = document.createElement("img");
-                        img.src = data;
-                        img.alt = "dropped image";
-                        item.querySelector(".template").appendChild(img);
-                    }
-                });
             })
+        
+            containers.forEach(container => {
+                container.addEventListener('dragover', e => {
+                    e.preventDefault()
+                    const afterElement = getDragAfterElement(container, e.clientY)
+                    const draggable = document.querySelector('.dragging')
+                    if (afterElement == null) {
+                    container.appendChild(draggable)
+                    } else {
+                    container.insertBefore(draggable, afterElement)
+                    }
+                })
+                })
+                
+                function getDragAfterElement(container, y) {
+                const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
+                
+                return draggableElements.reduce((closest, child) => {
+                    const box = child.getBoundingClientRect()
+                    const offset = y - box.top - box.height / 2
+                    if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child }
+                    } else {
+                    return closest
+                    }
+                }, { offset: Number.NEGATIVE_INFINITY }).element
+                }
         }
         
 }
