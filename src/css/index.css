@@ -11,9 +11,6 @@ body {
     font-size: 18px;
 }
 
-label, p, span, button, ::placeholder {
-    font-family : 'Noto Sans KR', sans-serif;
-}
 
 .nav {
     position: fixed;
@@ -38,7 +35,6 @@ label, p, span, button, ::placeholder {
 }
 
 #app {
-    font-weight: 500;
     text-align: center;
 }
 
@@ -57,7 +53,6 @@ button {
     border-radius: 20px;
     background-color: #f1c40f;
     padding: 10px 15px;
-    font-family: 'malgunbd';
     color: #222222;
     font-size: 15px;
     line-height: 15px;
@@ -66,9 +61,10 @@ button {
 button:hover {
     color: white;
     cursor: pointer;
+    background-color: #3e8e41;
 }
 
-/* 메인페이지 */
+/* ----------------------------------------------메인페이지 --------------------------------------*/
 
 .home-background {
     background-color: #222222;
@@ -135,7 +131,7 @@ button:hover {
     color: white;
 }
 
-.design__drag-zone-text span {
+.design__drag-zone-text, .progress__inner span {
     color: #2ecc71;
 }
 
@@ -147,6 +143,12 @@ button:hover {
     border: 10px solid white;
     border-style: dashed;
     padding: 2rem;
+    margin: auto 4rem;
+}
+
+.design__img-wrap {
+    background-color: #222222;
+
 }
 
 .design__btn-reset{
@@ -165,9 +167,10 @@ button:hover {
     /* width: 33%; */
     height: 100%;
     background-color: #f39c12;
+    z-index: 1;
 }
 
-/* Board 페이지 */
+/*---------------------------------------- Board 페이지 ----------------------------------------------------*/
 #autoInput, #length, #width, input{
     background: transparent;
     border-top : none;
@@ -191,9 +194,12 @@ button:hover {
     font-size: 20px;
 }
 
-.board a {
+.board a, .submit a {
     text-decoration: none;
-    color : #222222;
+    color : #3e8e41;
+    border: 5px solid #3e8e41;
+    font-weight: 700;
+    padding : 10px;
 }
 
 .board a:hover {
@@ -242,4 +248,98 @@ button:hover {
     border-left: 5px solid white;
     height: 150px;
     margin: 0px 20px;
+}
+
+/* ------------------------------------Submit페이지 -----------------------------*/
+
+
+.progress__inner {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
+
+.progress__inner span {
+    padding-right : 10px;
+}
+
+.submit {
+    background-color: #222222;
+    margin: 0;
+}
+
+.submit h1 {
+    background-color: #222222;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: rgba(255, 255, 255, 0.788);
+}
+
+.submit__flex {
+    display: flex;
+    justify-content: center;
+}
+
+.submit__content-left {
+
+    background-color: rgba(255, 255, 255, 0.781);
+}
+
+.submit__content-right {
+
+    background-color: #f39c12;
+}
+
+
+#contact-form label { 
+    text-align: left;
+}
+
+#message {
+    resize: vertical;
+    height: 200px;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    font-size: 20px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.form__input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form__input-container label {
+    margin-bottom: 8px;
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+    text-align: left;
+    margin: 0 20px;
+}
+
+.submit__input-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#attachment {
+    float: left;
+}
+
+.submit__button-wrap {
+    margin : 20px;
+    float: right;
+
 }

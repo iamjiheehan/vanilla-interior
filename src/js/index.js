@@ -1,6 +1,7 @@
 import Home from "./pages/Home.js";
 import Design from "./pages/Design.js";
 import Board from "./pages/Board.js";
+import Submit from "./pages/Submit.js";
 
 const navigateTo = url => {
     history.pushState(null, null, url);
@@ -12,6 +13,8 @@ const router = async () => {
         { path : "/", pages : Home},
         { path : "/design", pages : Design},
         { path : "/board", pages : Board},
+        { path : "/submit", pages : Submit},
+
     ];
 
     const potentialMatches = routes.map( route => {
