@@ -9,6 +9,9 @@ export default class extends layout {
     async getHTML() {
         return `
             <div class="design">
+                <div id="myProgress">
+                    <div id="myBar" style = "width : 33.33%"></div>
+                </div>
                 <h1>선호하는 스타일을 알려주세요</h1>
                 <div class="design__img-wrap"> 
                     <div class="design__drag-zone">
@@ -35,49 +38,50 @@ export default class extends layout {
         `;
     }
     executeScript() {
-            console.log("hello");
 
-            const draggables = document.querySelectorAll('.design__drag-item')
-            const containers = document.querySelectorAll('.design__drag-zone')
-        
-            draggables.forEach(draggable => {
-                draggable.addEventListener('dragstart', () => {
-                    draggable.classList.add('dragging');
-                })
+        console.log("hello This is design Page");
 
-                draggable.addEventListener('dragend', () => {
-                    draggable.classList.remove('dragging');
-                })
+        const draggables = document.querySelectorAll('.design__drag-item')
+        const containers = document.querySelectorAll('.design__drag-zone')
+    
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', () => {
+                draggable.classList.add('dragging');
             })
+
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('dragging');
+            })
+        })
         
-            containers.forEach(container => {
-                container.addEventListener('dragover', e => {
-                    e.preventDefault()
-                    const afterElement = getDragAfterElement(container, e.clientY)
-                    const draggable = document.querySelector('.dragging')
-                    const count = container.querySelectorAll('.design__drag-item').length;
-                    const isAlreadyInContainer = container.contains(draggable);
-                    if (!isAlreadyInContainer && afterElement == null && count < 3) {
-                    container.appendChild(draggable);
-                    } else if (!isAlreadyInContainer && count < 3) {
-                    item = container.insertBefore(draggable, afterElement);
-                    }
-                })
-                })
-                
-                function getDragAfterElement(container, y) {
-                const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
-                
-                return draggableElements.reduce((closest, child) => {
-                    const box = child.getBoundingClientRect()
-                    const offset = y - box.top - box.height / 2
-                    if (offset < 0 && offset > closest.offset) {
-                    return { offset: offset, element: child }
-                    } else {
-                    return closest
-                    }
-                }, { offset: Number.NEGATIVE_INFINITY }).element
+        containers.forEach(container => {
+            container.addEventListener('dragover', e => {
+                e.preventDefault()
+                const afterElement = getDragAfterElement(container, e.clientY)
+                const draggable = document.querySelector('.dragging')
+                const count = container.querySelectorAll('.design__drag-item').length;
+                const isAlreadyInContainer = container.contains(draggable);
+                if (!isAlreadyInContainer && afterElement == null && count < 3) {
+                container.appendChild(draggable);
+                } else if (!isAlreadyInContainer && count < 3) {
+                item = container.insertBefore(draggable, afterElement);
                 }
+            })
+            })
+            
+            function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
+            
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect()
+                const offset = y - box.top - box.height / 2
+                if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child }
+                } else {
+                return closest
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element
+            }
         }
         
 }

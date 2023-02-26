@@ -1,13 +1,18 @@
 @font-face {
     font-family : 'malgunbd';
-    src : url(./font/malgunbd.ttf)
+    src : url(./font/malgunbd.ttf) 
 }
+
 
 body {
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
+}
+
+label, p, span, button, ::placeholder {
+    font-family : 'Noto Sans KR', sans-serif;
 }
 
 .nav {
@@ -33,11 +38,8 @@ body {
 }
 
 #app {
-    /* margin: 2em; */
-    line-height: 1.5;
     font-weight: 500;
     text-align: center;
-    
 }
 
 nav img {
@@ -66,6 +68,7 @@ button:hover {
     cursor: pointer;
 }
 
+/* 메인페이지 */
 
 .home-background {
     background-color: #222222;
@@ -87,6 +90,11 @@ button:hover {
     right: 10%;
 }
 
+.home-box  h1 {
+    text-align: right;
+}
+
+/* Design 페이지 */
 .design h1 {
     background-color: #222222;
     margin: 0;
@@ -98,15 +106,6 @@ button:hover {
 .design__btn-wrap {
     background-color: #222222;
     padding: 20px;
-}
-
-.design__drag-item {
-    padding: 1rem;
-    background-color: white;
-    border: 1px solid black;
-    cursor: move;
-    max-width: 20%;
-    flex-basis: 20%;
 }
 
 .design__drag-item.dragging {
@@ -125,13 +124,12 @@ button:hover {
 .design__drag-zone img {
     max-width: 20%;
     flex-basis: 20%;
-    padding: 1rem;
+    padding: 10px;
     background-color: white;
     border: 1px solid black;
     cursor: move;
 
 }
-
 
 .design__drag-zone-text h2 {
     color: white;
@@ -153,4 +151,95 @@ button:hover {
 
 .design__btn-reset{
     margin-bottom: 2rem;
+}
+
+
+#myProgress {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+}
+#myBar {
+    position: absolute;
+    /* width: 33%; */
+    height: 100%;
+    background-color: #f39c12;
+}
+
+/* Board 페이지 */
+#autoInput, #length, #width, input{
+    background: transparent;
+    border-top : none;
+    border-right : none;
+    border-left : none;
+}
+
+.board span {
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.board label {
+    line-height: 50px;
+}
+
+.board button {
+}
+
+.board input {
+    font-size: 20px;
+}
+
+.board a {
+    text-decoration: none;
+    color : #222222;
+}
+
+.board a:hover {
+    color : grey;
+}
+
+.board hr {
+    width: 30%;
+}
+
+.board__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.board__calculator-unit, .board__deadline {
+    padding-bottom: 20px;
+}
+
+.board__calculator-price {
+    background-color : #d8dee288;
+    padding-bottom: 20px;
+
+}
+
+.board__calculator-flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.board__btn-wrap {
+    padding: 20px;
+}
+
+.board__calculator-right, .board__calculator-left {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.board__calculator-line {
+    border: none;
+    border-left: 5px solid white;
+    height: 150px;
+    margin: 0px 20px;
 }
