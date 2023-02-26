@@ -9,6 +9,7 @@ const navigateTo = url => {
 }
 
 const router = async () => {
+    
     const routes = [
         { path : "/", pages : Home},
         { path : "/design", pages : Design},

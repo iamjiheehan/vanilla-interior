@@ -49,9 +49,16 @@ export default class extends layout {
                         </form>
                         </div>
                     </div>
-                    <p>
-                        <a href="/home" data-link >메인 페이지로 돌아가기</a>
-                    </p>
+                    <div class="board__btn-flex">
+                        <div class="board__btn-wrap">
+                            <a href="/design" data-link id = "next-btn"> 이전 페이지 </a>
+                        </div>
+                        <div>
+                            <p>
+                                <a onclick="location.reload()" class="reset-btn"> 다시 입력하기 </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;

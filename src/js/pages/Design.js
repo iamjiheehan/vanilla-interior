@@ -27,12 +27,12 @@ export default class extends layout {
                     <div class="design__drag-zone design__drag-border">
                         <div class = "design__drag-zone-text">
                             <h2><span>✔</span> 마음에 드는 스타일 3가지를 여기에 넣어주세요</h2>
-                            <button class="design__btn-reset" onclick="location.reload()">Reset</button>
+                            <button class="reset-btn" onclick="location.reload()">Reset</button>
                         </div>
                     </div>
                 </div>
                 <div class="design__btn-wrap">
-                    <button class="design__btn">다음 페이지</button>
+                    <a href="/board" data-link id = "next-btn"> 다음 페이지 </a>
                 </div>
             </div>
         `;
@@ -41,8 +41,8 @@ export default class extends layout {
 
         console.log("hello This is design Page");
 
-        const draggables = document.querySelectorAll('.design__drag-item')
-        const containers = document.querySelectorAll('.design__drag-zone')
+        const draggables = document.querySelectorAll('.design__drag-item');
+        const containers = document.querySelectorAll('.design__drag-zone');
     
         draggables.forEach(draggable => {
             draggable.addEventListener('dragstart', () => {
@@ -67,7 +67,7 @@ export default class extends layout {
                 item = container.insertBefore(draggable, afterElement);
                 }
             })
-            })
+        })
             
             function getDragAfterElement(container, y) {
                 const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]

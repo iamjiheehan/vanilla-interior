@@ -56,11 +56,18 @@ export default class extends layout {
                         <label for="deadline">날짜 입력하기 : </label>
                         <input type="date" id="deadline" name="deadline"><br>
                     </div>
-                    <p>
-                        <a href="/board" data-link> 다시 입력하기 </a>
-                    </p>
-                    <div class="board__btn-wrap">
-                        <button class="board">다음 페이지</button>
+                    <div class="board__btn-flex">
+                        <div class="board__btn-wrap">
+                            <a href="/design" data-link id = "next-btn"> 이전 페이지 </a>
+                        </div>
+                        <div>
+                            <p>
+                                <a href="/board" data-link class="reset-btn"> 다시 입력하기 </a>
+                            </p>
+                        </div>
+                        <div class="board__btn-wrap">
+                            <a href="/submit" data-link id = "next-btn"> 다음 페이지 </a>
+                        </div>
                     </div>
                 </div>
             </div>
