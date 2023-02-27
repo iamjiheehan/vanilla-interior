@@ -1,8 +1,8 @@
 import layout from "./layout.js";
 
 export default class extends layout {
-    constructor() {
-        super();
+    constructor(params) {
+        super(params);
         this.setTitle("Board");
     }
     async getHTML() {
@@ -37,7 +37,7 @@ export default class extends layout {
 
                             <div class = "board__calculator-right">
                                 <label for="scale">공간의 전체 면적 입력하기 : </label>
-                                <input type="number" id="scale" name="scale" placeholder = "둘 중 하나만 입력해주세요"><br>
+                                <input type="number" id="scale" name="scale" placeholder = "숫자만 입력해주세요"><br>
                             </div>
                         </div>
                         <div class="board__amountOfimgs">
@@ -111,6 +111,17 @@ export default class extends layout {
             resultElement.value = formattedCost + " 원 입니다.";
             console.log(resultElement.value);
         }
+            // Get the formData from the params object
+        const formData = new FormData();
+        for (const pair of new FormDataSearchParams(this.params.formData)) {
+        formData.append(pair[0], pair[1]);
+        }
 
+        // Save the formData to local storage
+        const saveDataToLocalStorage = (data) => {
+        const key = "myFormData";
+        window.localStorage.setItem(key, JSON.stringify(data));
+        };
+        saveDataToLocalStorage([...formData]);
     }
 }

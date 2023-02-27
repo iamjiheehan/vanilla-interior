@@ -1,12 +1,16 @@
 import layout from "./layout.js";
 
+
 export default class extends layout {
-    constructor() {
-        super();
+    constructor(params) {
+        super(params);
         this.setTitle("Submit");
     }
+
+
     async getHTML() {
         return `
+        
             <div class="submit">
                 <div id="myProgress">
                     <div class="progress__inner">
@@ -59,6 +63,7 @@ export default class extends layout {
                             </p>
                         </div>
                     </div>
+                    <div id="selected-styles"></div>
                 </div>
             </div>
         `;
@@ -114,8 +119,32 @@ export default class extends layout {
             } else if (containLetter) {
                 phoneErrorMessage.textContent = '연락처 형식이 올바르지 않습니다.';
             }
-        });
         
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const selectedImageAlts = JSON.parse(localStorage.getItem("selectedImageAlts"));
+          
+            let stylesHTML = "";
+            if (selectedImageAlts) {
+              stylesHTML = `
+                <p>You have selected the following styles:</p>
+                <ul>
+                  ${selectedImageAlts.map((imageAlt) => `<li>${imageAlt}</li>`).join("")}
+                </ul>
+              `;
+            } else {
+              stylesHTML = `<p>No styles selected.</p>`;
+            }
+          
+            const selectedImagesContainer = document.getElementById("selected-images");
+            selectedImagesContainer.innerHTML = stylesHTML;
+          });
+          
+          const data = JSON.parse(localStorage.getItem('myData'));
+          console.log(data);
+          
+    
     }
 
 }

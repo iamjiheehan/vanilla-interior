@@ -1,8 +1,8 @@
 import layout from "./layout.js";
 
 export default class extends layout {
-    constructor() {
-        super();
+    constructor(params) {
+        super(params);
         this.setTitle("Design");
     }
 
@@ -43,49 +43,61 @@ export default class extends layout {
 
         const draggables = document.querySelectorAll('.design__drag-item');
         const containers = document.querySelectorAll('.design__drag-zone');
-    
+        const chosenItem = [];
+
         draggables.forEach(draggable => {
             draggable.addEventListener('dragstart', () => {
                 draggable.classList.add('dragging');
-            })
-
+            });
+        
             draggable.addEventListener('dragend', () => {
                 draggable.classList.remove('dragging');
-            })
-        })
+            });
+        });
         
         containers.forEach(container => {
             container.addEventListener('dragover', e => {
-                e.preventDefault()
-                const afterElement = getDragAfterElement(container, e.clientY)
-                const draggable = document.querySelector('.dragging')
+                e.preventDefault();
+        
+                const afterElement = getDragAfterElement(container, e.clientY);
+                const draggable = document.querySelector('.dragging');
                 const count = container.querySelectorAll('.design__drag-item').length;
                 const isAlreadyInContainer = container.contains(draggable);
-                if (!isAlreadyInContainer && afterElement == null && count < 3) {
-                container.appendChild(draggable);
-                } else if (!isAlreadyInContainer && count < 3) {
-                item = container.insertBefore(draggable, afterElement);
+            
+                if (!isAlreadyInContainer && afterElement == null && count < 3 && chosenItem.length < 3) {
+                    container.appendChild(draggable);
+                    chosenItem.push(draggable);
+                } else if (!isAlreadyInContainer && count < 3 && chosenItem.length < 3) {
+                const item = container.insertBefore(draggable, afterElement);
+                chosenItem.push(item);
+                } else if (draggable.classList.contains('item') && isAlreadyInContainer) {
+                chosenItem.push(draggable);
                 }
-            })
-        })
-            
-            function getDragAfterElement(container, y) {
-                const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
-            
+                
+                const altTexts = chosenItem.map(image => image.alt);
+                console.log(altTexts);
+                localStorage.setItem('altTexts', JSON.stringify(altTexts));
+            });
+        });
+
+        console.log(altTexts);
+        localStorage.setItem('altTexts', JSON.stringify(altTexts));
+
+        console.log(chosenItem);
+
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
             return draggableElements.reduce((closest, child) => {
-                    const box = child.getBoundingClientRect()
-                    const offset = y - box.top - box.height / 2
-                    if (offset < 0 && offset > closest.offset) {
+                const box = child.getBoundingClientRect()
+                const offset = y - box.top - box.height / 2
+                if (offset < 0 && offset > closest.offset) {
                     return { offset: offset, element: child }
-                    } else {
+                } else {
                     return closest
-                    }
-                }, { offset: Number.NEGATIVE_INFINITY }).element
-            }
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
-        
+    }
 }
 
-        
 
-    

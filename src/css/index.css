@@ -71,7 +71,7 @@ h1 {
 }
 
 
-.reset-btn {
+.reset-btn, .board__caculate-btn {
     text-decoration: none;
     background-color : #3e8e41;
     border: none;
