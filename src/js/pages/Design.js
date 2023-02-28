@@ -79,12 +79,6 @@ export default class extends layout {
                 localStorage.setItem('altTexts', JSON.stringify(altTexts));
             });
         });
-
-        console.log(altTexts);
-        localStorage.setItem('altTexts', JSON.stringify(altTexts));
-
-        console.log(chosenItem);
-
         function getDragAfterElement(container, y) {
             const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
             return draggableElements.reduce((closest, child) => {
@@ -97,6 +91,12 @@ export default class extends layout {
                 }
             }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
+
+        // altTetx 데이터보내기
+        console.log(altTexts);
+        localStorage.setItem('altTexts', JSON.stringify(altTexts));
+        window.location.href = 'submit.html';
+        console.log(chosenItem);
     }
 }
 

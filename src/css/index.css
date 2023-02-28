@@ -1,16 +1,28 @@
+/* Fonts */
+
 @font-face {
-    font-family : 'malgunbd';
-    src : url(./font/malgunbd.ttf) 
+    font-family: 'Englishfont';
+    src: url(./font/malgunbd.ttf);
+    unicode-range: U+0000-007F;
 }
 
+@font-face {
+    font-family: 'Koreanfont';
+    src: url(./font/Pretendard-SemiBold.ttf);
+    unicode-range: U+AC00-D7A3;
+}
+
+
+/* General */
 
 body {
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'EnglishFont', 'KoreanFont', sans-serif;
     font-size: 18px;
 }
 
+/* Navigation */
 
 .nav {
     position: fixed;
@@ -19,6 +31,7 @@ body {
     width: var(--nav-width);
     height: 100vh;
     background: #222222;
+    width: 200px;
 }
 
 .nav__link {
@@ -30,13 +43,10 @@ body {
 }
 
 .nav__link:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: burlywood;
+background: rgba(255, 255, 255, 0.05);
+color: burlywood;
 }
 
-#app {
-    text-align: center;
-}
 
 nav img {
     width: 80%;
@@ -44,12 +54,16 @@ nav img {
     margin: 18px auto 15px auto;
 }
 
-h1 {
-    text-align: center;
+/* App */
+
+#app {
+text-align: center;
 }
 
+/* Buttons */
+
 .button-wrapper {
-    padding: 30px;
+padding: 30px;
 }
 
 #next-btn {
@@ -88,18 +102,21 @@ h1 {
     cursor: pointer;
 }
 
+
+/* Progress Bar */
+
 #myProgress {
     position: relative;
     width: 100%;
     height: 30px;
     background-color: grey;
 }
+
 #myBar {
-    position: absolute;
-    /* width: 33%; */
-    height: 100%;
-    background-color: #f39c12;
-    z-index: 1;
+position: absolute;
+height: 100%;
+background-color: #f39c12;
+z-index: 1;
 }
 
 /* ----------------------------------------------메인페이지 --------------------------------------*/
@@ -116,7 +133,6 @@ h1 {
     background-image: url(../img/sofa.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-position: center center; */
     height: 100vh;
     position: relative;
 
@@ -290,16 +306,17 @@ h1 {
 }
 
 .submit {
-    background-color: #222222;
     margin: 0;
 }
 
 .submit h1 {
-    background-color: #222222;
     margin: 0;
     padding-top: 60px;
-    padding-bottom: 30px;
-    color: rgba(255, 255, 255, 0.788);
+    padding-bottom: 60px;
+}
+
+.submit__content-title {
+    background-color: #d8dee288;
 }
 
 .submit__flex {
@@ -307,16 +324,27 @@ h1 {
     justify-content: center;
 }
 
-.submit__content-left {
-
-    background-color: rgba(255, 255, 255, 0.781);
+.submit__content-left, .submit__content-right {
+    border: 5px solid #d8dee288;
 }
 
-.submit__content-right {
-
-    background-color: #f39c12;
+.submit__content-left h2{
+    margin: 0;
+    padding: 1rem;
 }
 
+.submit__content-left h3{
+    margin: 0;
+    padding: 1rem;
+    background-color: #d8dee288;
+
+    
+}
+
+#preferred-style-image {
+    display: flex;
+    justify-content: space-evenly;
+} 
 
 #contact-form label { 
     text-align: left;
@@ -325,6 +353,10 @@ h1 {
 #message {
     resize: vertical;
     height: 200px;
+}
+
+#contact-form{
+    padding-top : 45px;
 }
 
 #contact-form input::placeholder,
@@ -367,5 +399,9 @@ h1 {
 .submit__button-wrap {
     margin : 20px;
     float: right;
+}
 
+#success-message {
+    color: #f39c12;
+    text-align: right;
 }

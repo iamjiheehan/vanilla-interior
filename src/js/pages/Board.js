@@ -97,12 +97,21 @@ export default class extends layout {
             const length = document.getElementById("length").value;
             const width = document.getElementById("width").value;
 
+            console.log(amount);
+
             let area = 0; // declare area outside of the if block
 
             if (scale === ""){
               area = length * width * amount / 33.0579;
+                localStorage.setItem("length", length);
+                localStorage.setItem("width", width);
+                localStorage.setItem("amount", amount);
+                
             } else if ( width === "" || length === ""){
-              area = scale * amount / 33.0579;
+                
+                area = scale * amount / 33.0579;
+                localStorage.setItem("scale", scale);
+                localStorage.setItem("amount", amount);
             }
 
             const cost = Math.round(area * 50000 / 1000) * 1000;
@@ -110,18 +119,24 @@ export default class extends layout {
             const resultElement = document.getElementById("result");
             resultElement.value = formattedCost + " 원 입니다.";
             console.log(resultElement.value);
+            localStorage.setItem("result", resultElement.value);
         }
-            // Get the formData from the params object
-        const formData = new FormData();
-        for (const pair of new FormDataSearchParams(this.params.formData)) {
-        formData.append(pair[0], pair[1]);
-        }
+        
 
-        // Save the formData to local storage
-        const saveDataToLocalStorage = (data) => {
-        const key = "myFormData";
-        window.localStorage.setItem(key, JSON.stringify(data));
-        };
-        saveDataToLocalStorage([...formData]);
+        //납품날짜 오늘 이전 날짜 선택 제한
+        // Get the date input element
+        const deadlineInput = document.getElementById("deadline");
+
+        // Get the current date and set it as the minimum date for the input element
+        const today = new Date().toISOString().split("T")[0];
+        deadlineInput.setAttribute("min", today);
+
+
+        //납품날짜  값 전달
+        const deadline = document.getElementById("deadline");
+        deadline.addEventListener("input", function() {
+            const deadlineValue = deadline.value;
+            localStorage.setItem("deadline", deadlineValue);
+        });
     }
 }
