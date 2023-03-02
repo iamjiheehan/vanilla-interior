@@ -13,7 +13,7 @@
 }
 
 
-/* General */
+/* --------------------------------General --------------------------------*/
 
 body {
     --nav-width: 200px;
@@ -22,7 +22,7 @@ body {
     font-size: 18px;
 }
 
-/* Navigation */
+/* ------------------------------------Navigation ------------------------*/
 
 .nav {
     position: fixed;
@@ -54,13 +54,13 @@ nav img {
     margin: 18px auto 15px auto;
 }
 
-/* App */
+/*-------------------------------------- App------------------------- */
 
 #app {
 text-align: center;
 }
 
-/* Buttons */
+/* ------------------------------------Buttons----------------------- */
 
 .button-wrapper {
 padding: 30px;
@@ -103,13 +103,14 @@ padding: 30px;
 }
 
 
-/* Progress Bar */
+/* -------------------------Progress Bar------------------------------------ */
 
 #myProgress {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 30px;
     background-color: grey;
+    position: fixed;
 }
 
 #myBar {
@@ -129,27 +130,23 @@ z-index: 1;
 
 
 .home-background {
+    margin: 0;
     background-color: #222222;
-    background-image: url(../img/sofa.jpg);
-    background-size: contain;
+    background-image: url(../img/background.png);
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
-
 }
 
 .home-box {
     background-color: rgba(255, 255, 255, 0.623);
     padding: 20px 100px;
-    text-align: right;
     position: absolute;
-    top: 15%;
-    right: 10%;
+    top: 5rem;
+    left: 25%;
 }
 
-.home-box  h1 {
-    text-align: right;
-}
 
 /* -------------------------------Design 페이지 ---------------------------------*/
 .design h1 {
@@ -218,7 +215,9 @@ z-index: 1;
     padding-top : 20px;
     padding-bottom : 20px;
 }
+
 /*---------------------------------------- Board 페이지 ----------------------------------------------------*/
+
 #autoInput, #length, #width, input{
     background: transparent;
     border-top : none;
@@ -405,3 +404,127 @@ z-index: 1;
     color: #f39c12;
     text-align: right;
 }
+
+
+
+/*------------------------------------- Media Queries------------------ */
+
+@media screen and (max-width: 414px) {
+    .nav {
+        width: 100%;
+        height: 130px;
+        text-align: center;
+        position: fixed;
+        z-index: 99;
+    }
+
+    .nav a {
+        display: inline;
+        text-align: center;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 0.5rem;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+    body {
+        --nav-width: auto;
+    }
+
+    .button-wrapper {
+        padding: 15px;
+    }
+
+    #myProgress {
+        top: 8rem;
+    }
+
+    .home-background {
+        background-position: center;
+    }
+    .home-box {
+        position: static;
+        margin-top : 130px;
+        padding: 10px;
+    }
+
+    .design {
+        margin-top: 130px;
+    }
+
+    .design__drag-zone {
+        padding: 1rem;
+    }
+
+    .design__drag-zone img {
+        padding: 0;
+        max-width: 30%;
+    }
+
+    .design__btn-wrap {
+        padding : 30px
+    }
+
+
+    .board__calculator-unit {
+        margin-top: 150px;
+
+    }
+
+    .board__calculator-flex {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .board__calculator-line {
+        border: none;
+        border-left: 5px solid white;
+        height: 80px;
+        transform: rotate(90deg);
+        margin: 0;
+    }
+
+    .board__deadline {
+        padding-bottom: 0;
+    } 
+
+    .submit {
+        margin-top: 144px;
+    }
+
+    .submit h1  {
+        margin-top: 1rem;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #preferred-style-image {
+    display: flex; 
+        flex-wrap: wrap
+    }
+
+    .submit__flex {
+        display: block;
+    }
+    .submit__content-left, .submit__content-right {
+        border: none;
+    }
+
+    .submit__input-wrap {
+        display: block;
+    }
+
+    .mgs-btn {
+        margin-top: 14px;
+    }
+    
+} 
