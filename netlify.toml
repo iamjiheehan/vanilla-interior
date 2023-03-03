@@ -3,6 +3,9 @@
   publish = "public"
   base = "/"
 
+  [build.environment]
+    NODE_VERSION = "8.19.3"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
