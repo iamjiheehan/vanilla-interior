@@ -22,6 +22,17 @@ body {
     font-size: 18px;
 }
 
+
+#autoInput, #length, #width, input{
+    background: transparent;
+    border-top : none;
+    border-right : none;
+    border-left : none;
+}
+
+h1 {
+    margin-top: 3rem;
+}
 /* ------------------------------------Navigation ------------------------*/
 
 .nav {
@@ -149,8 +160,13 @@ z-index: 1;
 
 
 /* -------------------------------Design 페이지 ---------------------------------*/
-.design h1 {
+
+.design {
     background-color: #222222;
+
+    height: 100vh;
+}
+.design h1 {
     margin: 0;
     padding-top: 60px;
     padding-bottom: 30px;
@@ -183,7 +199,6 @@ z-index: 1;
     flex-wrap: wrap;
     background-color: #222222;
     padding: 2rem;
-    position: relative;
 }
 
 .design__drag-zone img {
@@ -193,7 +208,6 @@ z-index: 1;
     background-color: white;
     border: 1px solid black;
     cursor: move;
-
 }
 
 .design__drag-zone-text h2 {
@@ -209,20 +223,13 @@ z-index: 1;
 }
 
 
-.board__btn-flex {
-    display: flex;
-    justify-content: space-around;
-    padding-top : 20px;
-    padding-bottom : 20px;
-}
+
 
 /*---------------------------------------- Board 페이지 ----------------------------------------------------*/
 
-#autoInput, #length, #width, input{
-    background: transparent;
-    border-top : none;
-    border-right : none;
-    border-left : none;
+
+.board {
+    height: 100vh;
 }
 
 .board span {
@@ -234,11 +241,9 @@ z-index: 1;
     line-height: 50px;
 }
 
-
 .board input {
     font-size: 20px;
 }
-
 
 .board hr {
     width: 30%;
@@ -278,6 +283,13 @@ z-index: 1;
     margin-bottom: 20px;
 }
 
+.board__btn-flex {
+    display: flex;
+    justify-content: space-around;
+    padding-top : 20px;
+    padding-bottom : 20px;
+}
+
 .board__calculator-right, .board__calculator-left {
     padding: 20px;
     margin-bottom: 20px;
@@ -310,8 +322,8 @@ z-index: 1;
 
 .submit h1 {
     margin: 0;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 70px;
 }
 
 .submit__content-title {
@@ -409,7 +421,7 @@ z-index: 1;
 
 /*------------------------------------- Media Queries------------------ */
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px){
     .nav {
         width: 100%;
         height: 130px;
@@ -422,6 +434,10 @@ z-index: 1;
         display: inline;
         text-align: center;
         padding: 12px;
+    }
+
+    .nav img {
+        width: 50%;    
     }
 
     h1 {
