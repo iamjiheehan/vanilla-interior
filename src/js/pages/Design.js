@@ -91,13 +91,6 @@ export default class extends layout {
                 }
             }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
-
-        // altTetx 데이터보내기
-        console.log(altTexts);
-        localStorage.setItem('altTexts', JSON.stringify(altTexts));
-        window.location.href = 'submit.html';
-        console.log(chosenItem);
     }
 }
-
 

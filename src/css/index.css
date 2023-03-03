@@ -157,6 +157,17 @@ z-index: 1;
     color: rgba(255, 255, 255, 0.788);
 }
 
+.design__drag-border{
+    border: 10px solid white;
+    border-style: dashed;
+    padding: 2rem;
+    margin: auto 4rem;
+}
+
+.design__img-wrap {
+    background-color: #222222;
+}
+
 .design__btn-wrap {
     background-color: #222222;
     padding: 50px;
@@ -195,17 +206,6 @@ z-index: 1;
 
 .design__drag-zone-text {
     width: 100%;
-}
-
-.design__drag-border{
-    border: 10px solid white;
-    border-style: dashed;
-    padding: 2rem;
-    margin: auto 4rem;
-}
-
-.design__img-wrap {
-    background-color: #222222;
 }
 
 
