@@ -2,13 +2,13 @@
 
 @font-face {
     font-family: 'Englishfont';
-    src: url(./font/malgunbd.ttf);
+    src: url(./font/malgun.ttf);
     unicode-range: U+0000-007F;
 }
 
 @font-face {
     font-family: 'Koreanfont';
-    src: url(./font/Pretendard-SemiBold.ttf);
+    src: url(./font/Quicksand-Light.ttf);
     unicode-range: U+AC00-D7A3;
 }
 
@@ -32,6 +32,10 @@ body {
 
 h1 {
     margin-top: 3rem;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 500;
 }
 /* ------------------------------------Navigation ------------------------*/
 
@@ -86,7 +90,6 @@ padding: 30px;
     font-size: 15px;
     line-height: 15px;
     text-decoration: none;
-    font-weight: 700;
 }
 
 #next-btn:hover {
@@ -154,8 +157,9 @@ z-index: 1;
     background-color: rgba(255, 255, 255, 0.623);
     padding: 20px 100px;
     position: absolute;
-    top: 5rem;
-    left: 25%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -168,7 +172,7 @@ z-index: 1;
 }
 .design h1 {
     margin: 0;
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 30px;
     color: rgba(255, 255, 255, 0.788);
 }
@@ -258,12 +262,12 @@ z-index: 1;
 
 .board__calculator-unit{
     padding-bottom: 20px;
-    padding-top : 20px;
+    padding-top : 35px;
 }
 
 .board__deadline {
     padding-top : 20px;
-    padding-bottom: 40px;
+    padding-bottom: 130px;
 }
 
 .board__calculator-price {
@@ -285,6 +289,8 @@ z-index: 1;
 
 .board__btn-flex {
     display: flex;
+    align-items: end;
+    bottom: 0;
     justify-content: space-around;
     padding-top : 20px;
     padding-bottom : 20px;
@@ -421,6 +427,44 @@ z-index: 1;
 
 /*------------------------------------- Media Queries------------------ */
 
+@media screen and (max-width: 992px){
+
+    
+    .home-box {
+        padding: 10px;
+    }
+
+    #preferred-style-image {
+        display: flex; 
+        flex-wrap: wrap
+    }
+    
+    .board__btn-flex  {
+        display: inline-flex;
+    }
+
+    .submit__flex {
+        display: block;
+    }
+
+    .submit__content-left, .submit__content-right {
+        border: none;
+    }
+
+    .submit__input-wrap {
+        display: block;
+    }
+    .mgs-btn {
+        margin-top: 14px;
+    }
+
+    .reset-btn, .board__caculate-btn {
+        margin: 0 30px;   
+    }
+
+}
+
+
 @media screen and (max-width: 768px){
     .nav {
         width: 100%;
@@ -468,7 +512,6 @@ z-index: 1;
         background-position: center;
     }
     .home-box {
-        position: static;
         margin-top : 130px;
         padding: 10px;
     }
@@ -523,24 +566,6 @@ z-index: 1;
         padding-bottom: 30px;
     }
 
-    #preferred-style-image {
-    display: flex; 
-        flex-wrap: wrap
-    }
 
-    .submit__flex {
-        display: block;
-    }
-    .submit__content-left, .submit__content-right {
-        border: none;
-    }
-
-    .submit__input-wrap {
-        display: block;
-    }
-
-    .mgs-btn {
-        margin-top: 14px;
-    }
     
 } 
