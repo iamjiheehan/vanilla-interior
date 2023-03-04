@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:css": "mkdir -p vanilla-project/src/css && cp src/css/index.css vanilla-project/src/css/style.css",
-    "build:js": "browserify src/js/main.js -o vanilla-project/js/bundle.js",
+    "build:js": "browserify src/js/index.js -o vanilla-project/js/bundle.js",
     "build:html": "cp src/index.html vanilla-project/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
