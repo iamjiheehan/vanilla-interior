@@ -1,14 +1,15 @@
 {
   "name": "vanilla-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "- ### 홈(메인화면)</br>\r     ##### 홈페이지 소개",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:css": "mkdir -p vanilla-project/src/css && cp src/css/index.css vanilla-project/src/css/index.css",
     "build:js": "browserify src/js/index.js -o vanilla-project/js/bundle.js",
     "build:html": "cp src/index.html vanilla-project/src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,9 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
     "browserify": "^17.0.0"
   }
 }

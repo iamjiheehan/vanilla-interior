@@ -1,7 +1,7 @@
-const Home = require("./pages/Home.js").default;
-const Design = require("./pages/Design.js").default;
-const Board = require("./pages/Board.js").default;
-const Submit = require("./pages/Submit.js").default;
+import Home from "./pages/Home.js";
+import Design from "./pages/Design.js";
+import Board from "./pages/Board.js";
+import Submit from "./pages/Submit.js";
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
