@@ -7,7 +7,7 @@
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:js": "babel src --out-dir vanilla-project/src/js --copy-files",
     "build:html": "if not exist vanilla-project mkdir vanilla-project && copyfiles src\\index.html vanilla-project\\index.html",
-    "build:css": "if not exist vanilla-project\\src\\css mkdir vanilla-project\\src\\css && copyfiles src\\css\\index.css vanilla-project\\src\\css\\index.css && then",
+    "build:css": "if not exist vanilla-project\\src\\css mkdir vanilla-project\\src\\css && copyfiles src\\css\\index.css vanilla-project\\src\\css\\index.css",
     "test": "jest",
     "start": "node server.js"
   },
