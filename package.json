@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:js": "babel src --out-dir vanilla-project/src/js --copy-files",
-    "build:html": "if not exist vanilla-project mkdir vanilla-project && copyfiles src\\index.html vanilla-project\\index.html",
+    "build:html": "mkdirp vanilla-project\\src",
     "build:css": "mkdirp vanilla-project\\src\\css",
     "test": "jest",
     "start": "node server.js"
