@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:html",
-    "build:css": "copy src\\css\\index.css vanilla-project\\src\\css\\",
+    "build:css": "copyfiles src\\css\\index.css vanilla-project\\src\\css\\",
     "build:js": "babel src --out-dir vanilla-project/src/js --copy-files",
     "build:html": "copy src\\index.html vanilla-project",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,6 +22,7 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
-    "browserify": "^17.0.0"
+    "browserify": "^17.0.0",
+    "copyfiles": "^2.4.1"
   }
 }
