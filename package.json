@@ -4,12 +4,8 @@
   "description": "...",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:css && npm run build:js && npm run build:html",
-    "build:js": "babel src --out-dir vanilla-project/src/js --copy-files",
-    "build:html": "copy src\\index.html vanilla-project\\src\\index.html",
-    "build:css": "if not exist vanilla-project\\src\\css mkdir vanilla-project\\src\\css",
-    "test": "jest",
-    "start": "node server.js"
+    "build": "npm run build",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
