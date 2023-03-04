@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:html",
-    "build:css": "mkdir -p vanilla-project/src/css && cp src/css/index.css vanilla-project/src/css/index.css",
+    "build:css": "copy src\\css\\index.css vanilla-project\\src\\css\\",
     "build:js": "babel src --out-dir vanilla-project/src/js --copy-files",
-    "build:html": "cp src/index.html vanilla-project/src/index.html",
+    "build:html": "copy src\\index.html vanilla-project",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
