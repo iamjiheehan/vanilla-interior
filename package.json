@@ -1,14 +1,13 @@
 {
   "name": "vanilla-project",
   "version": "1.0.0",
-  "description": "...",
+  "description": "",
   "main": "index.js",
   "engine": {
     "node": "14.8"
   },
-  "type": "module",
   "scripts": {
-    "start" : "node index.js",
+    "start": "node index.js",
     "test": "jest"
   },
   "keywords": [],
