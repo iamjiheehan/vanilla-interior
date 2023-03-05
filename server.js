@@ -11,11 +11,10 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // Serve JavaScript file with correct MIME type
 app.get('/public/index.js', (req, res) => {
     const filePath = path.resolve(__dirname, 'public', 'index.js');
-    const mimeType = mime.getType(filePath);
-
-    res.set('Content-Type', mimeType);
+    res.set('Content-Type', 'text/javascript');
     res.sendFile(filePath);
 });
+
 
 // Serve the index.html file with the script for the Design.js file
 app.get('/design', (req, res) => {
