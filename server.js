@@ -3,7 +3,6 @@ const mime = require('mime');
 const path = require('path');
 
 const app = express();
-const __dirname = path.resolve();
 
 // Serve static files from the public folder
 app.use("/public", express.static(path.join(__dirname, "public")));
@@ -14,7 +13,6 @@ app.get('/public/index.js', (req, res) => {
     res.set('Content-Type', 'text/javascript');
     res.sendFile(filePath);
 });
-
 
 // Serve the index.html file with the script for the Design.js file
 app.get('/design', (req, res) => {
