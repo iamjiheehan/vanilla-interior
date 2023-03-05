@@ -6,8 +6,9 @@
   "engine": {
     "node": "14.8"
   },
+  "type": "module",
   "scripts": {
-    "build": "node index.js",
+    "build": "node src/js/index.js",
     "test": "jest"
   },
   "keywords": [],
