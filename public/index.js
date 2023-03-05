@@ -48,6 +48,13 @@ const router = async () => {
     const pages = new match.route.pages(getParams(match));
     
 
+    if (window.navigator.userAgentData && window.navigator.userAgentData.brands.length > 0) {
+        const browserName = window.navigator.userAgentData.brands[0].brand;
+        const version = parseInt(window.navigator.userAgentData.brands[0].version, 10);
+        if (browserName === "Chrome" && version >= 101) {
+            console.log("Chrome 101 or later detected. Use navigator.userAgentData instead of navigator.userAgent, navigator.appVersion, and navigator.platform.");
+        }
+    }
 
     document.querySelector("#app").innerHTML = await pages.getHTML();
     await pages.executeScript();
