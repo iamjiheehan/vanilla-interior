@@ -21,9 +21,7 @@ export default class extends layout {
             </div>
         `;
     }
-
     executeScript() {
         console.log("Hello This is Main Page");
     }
-
 }
