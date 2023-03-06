@@ -2,9 +2,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  # Exclude .js file extensions from the redirect rule
+  # Exclude .js and .css file extensions from the redirect rule
   force = true
-  conditions = {Path: ["!/*.js"]}
+  conditions = {Path: ["!/*.js", "!/*.css"]}
 
 [build]
   command = "npm run build"
@@ -14,3 +14,19 @@
   for = "/*.js"
   [headers.values]
     Content-Type = "text/javascript"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+# Include the public folder
+[[redirects]]
+  from = "/public/*"
+  to = "/public/:splat"
+  status = 200
+
+[[headers]]
+  for = "/public/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
