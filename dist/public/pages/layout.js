@@ -1,0 +1,1 @@
+export default class{constructor(t){this.params=t,console.log(this.params)}setTitle(t){document.title=t}async(t){return""}async executeViewScript(){return""}}

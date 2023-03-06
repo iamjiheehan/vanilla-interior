@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engine": {
+  "engines": {
     "node": "14.8"
   },
   "scripts": {
     "start": "node index.js",
     "test": "jest",
-    "build": "babel public --out-dir dist --copy-files",
-    "webpack": "webpack --mode=production"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +22,9 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
     "browserify": "^17.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "copyfiles": "^2.4.1",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
