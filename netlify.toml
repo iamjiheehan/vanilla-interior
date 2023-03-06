@@ -2,6 +2,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  # Exclude .js file extensions from the redirect rule
+  force = true
+  conditions = {Path: ["!/*.js"]}
 
 [build]
   command = "npm run build"
