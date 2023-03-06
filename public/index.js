@@ -2,6 +2,7 @@ import Home from "./js/pages/Home.js";
 import Design from "./js/pages/Design.js";
 import Board from "./js/pages/Board.js";
 import Submit from "./js/pages/Submit.js";
+import './css/index.css';
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
