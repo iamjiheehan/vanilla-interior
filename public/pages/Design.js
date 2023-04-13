@@ -39,7 +39,7 @@ export default class extends layout {
     }
     executeScript() {
 
-        console.log("hello This is design Page");
+        // console.log("hello This is design Page");
 
         document.querySelector('.reset-btn').addEventListener('click', () => {
             location.reload();
@@ -79,7 +79,7 @@ export default class extends layout {
                 }
                 
                 const altTexts = chosenItem.map(image => image.alt);
-                console.log(altTexts);
+                // console.log(altTexts);
                 localStorage.setItem('altTexts', JSON.stringify(altTexts));
             });
         });
