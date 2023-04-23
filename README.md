@@ -24,7 +24,8 @@
 ## 🌍 미리보기
 ### 배포 URL : https://jihee-vinterior.netlify.app/
  ###  목적 : 바닐라 자바스크립트만으로 구성된 SPA 웹사이트 구현
-- ####  특이점1 : 미디어쿼리를 사용하여 반응형 웹사이트 제작
+- ####  특이점1 : firebase를 이용한 로그인 기능 구현 -> https://hans-j.tistory.com/197
+- #### 특이점2 : Redux toolkit으로 상태관리 -> https://hans-j.tistory.com/208
 
 
 ![choosing](https://user-images.githubusercontent.com/102779433/231810527-e6af320c-bdd1-4972-bb66-c8d7e81fb732.gif)
