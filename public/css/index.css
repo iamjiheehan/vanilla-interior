@@ -570,6 +570,14 @@ z-index: 1;
         padding-top: 30px;
         padding-bottom: 30px;
     }
+    #preferred-style-image {
+        display : flex;
+        flex-direction: column;
+    }
+
+    button.reset-btn.msg-btn {
+        display: block;
+    }
 } 
 
 @media screen and (max-width: 480px) and (min-width: 320px){
@@ -596,8 +604,8 @@ z-index: 1;
         display : flex;
         flex-direction: column;
     }
-
-    .submit__input-wrap {
-        flex-direction: column;
+    
+    button.reset-btn.msg-btn {
+        display: block;
     }
 }
