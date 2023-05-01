@@ -56,7 +56,7 @@ export default class extends layout {
                                 </div>
                                 <input type="file" id="attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf">
                                 <div class="submit__button-wrap">
-                                    <button type="submit" class = "reset-btn mgs-btn">Send Message</button>
+                                    <button type="submit" class = "reset-btn msg-btn">Send Message</button>
                                 </div>
                                 <div id="success-message" style="display: none;">메일이 성공적으로 발송되었습니다.</div>
                             </form>
