@@ -41,7 +41,7 @@ ___
 ___
 
 ### 구현 플랫폼
--  #### Front-end 기술 및 라이브러리: HTML5, CSS3, JavaScript ES6
+-  #### Front-end 기술 : HTML5, CSS3, JavaScript ES6
 -  #### Back-end 라이브러리: node.js
 -  #### Code Editor : Visual Studio Code 1.78
 
