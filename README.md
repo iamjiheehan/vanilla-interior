@@ -24,9 +24,6 @@
 ## 🌍 미리보기
 ### 배포 URL : https://jihee-vinterior.netlify.app/
  ###  목적 : 바닐라 자바스크립트만으로 구성된 SPA 웹사이트 구현
-- ####  특이점1 : firebase를 이용한 로그인 기능 구현 -> https://hans-j.tistory.com/197
-- #### 특이점2 : Redux toolkit으로 상태관리 -> https://hans-j.tistory.com/208
-
 
 ![choosing](https://user-images.githubusercontent.com/102779433/231810527-e6af320c-bdd1-4972-bb66-c8d7e81fb732.gif)
 
@@ -40,12 +37,16 @@ ___
 - ##### 주제 : 실제 인테리어 이미지를 전문으로 다루는 프리랜서들과 고객들을 위한 실용적인 웹사이트 제작.
 - ##### 디자인 : 제가 그래픽 디자이너로 일하던 이미지로 메인을 설정하고 전체적인 것은 구글링을 통해서 조각조각 참고했습니다. 
 
-___
-
-### 🌞 성능최적화
--  #### Single Page Application으로써 반응속도가 매우 빠릅니다.
 
 ___
+
+### 구현 플랫폼
+-  #### Front-end 기술 및 라이브러리: HTML5, CSS3, JavaScript ES6
+-  #### Back-end 라이브러리: node.js
+-  #### Code Editor : Visual Studio Code 1.78
+
+___
+
 ### ❗ 
 - #### 모바일 버전 업데이트 중 입니다.
 
