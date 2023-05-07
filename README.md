@@ -47,7 +47,6 @@ ___
 
 ### 📗 기능 구현 
 - #### Drag and Drop ,Drop한 이미지들은 Local Storage에 저장
-### Code block
 ```js
         containers.forEach(container => {
             container.addEventListener('dragover', e => {
@@ -77,7 +76,6 @@ ___
 
 
 - #### isValidEmail() 함수를 정의하여 이메일 형식이 올바른지 확인
-### Code block
 ```js
         function isValidEmail(email) {
         // Use a regular expression to validate the email address
@@ -88,8 +86,6 @@ ___
 
 
 - #### nameInput과 phoneInput의 이벤트 핸들러를 등록하여, 이름과 연락처의 유효성을 검사
-
-### Code block
 ```js
         const nameInput = document.getElementById('name');
         const nameErrorMessage = document.getElementById('name-error-message');
@@ -121,7 +117,6 @@ ___
 
 - #### altTexts 변수를 이용하여 드래그앤 드롭된 이미지의 alt text 값을 가져와 preferred-style-image div에 해당 이미지를 출력
 
-### Code block
 ```js
         const altTexts = JSON.parse(localStorage.getItem('altTexts'));
         const chosenItemsEl = document.querySelector('.submit__chosenItems');
@@ -153,7 +148,7 @@ ___
 ```
 
 - #### getScale() 함수를 정의해서 localStorage에서 가져온 값들을 이용하여 공간 크기를 계산하고 출력
-### Code block
+
 ```js
         function getScale() {
             const width = localStorage.getItem("width");
