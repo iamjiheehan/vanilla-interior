@@ -12,7 +12,7 @@ export default class extends layout {
                 <div id="myProgress">
                     <div id="myBar" style = "width : 33.33%"></div>
                 </div>
-                <h1>선호하는 스타일을 알려주세요</h1>
+                <h2 class="design-title">선호하는 스타일을 골라보세요</h2>
                 <div class="design__img-wrap"> 
                     <div class="design__drag-zone">
                         <img class="design__drag-item" draggable="true" src="public/img/design-1.jpg" alt="Bohemian">
@@ -37,64 +37,83 @@ export default class extends layout {
             </div>
         `;
     }
+
     executeScript() {
-
-        // console.log("hello This is design Page");
-
-        document.querySelector('.reset-btn').addEventListener('click', () => {
+        console.log("hello This is design Page");
+        document.querySelector(".reset-btn").addEventListener("click", () => {
             location.reload();
         });
 
-        const draggables = document.querySelectorAll('.design__drag-item');
-        const containers = document.querySelectorAll('.design__drag-zone');
+        const draggables = document.querySelectorAll(".design__drag-item");
+        const containers = document.querySelectorAll(".design__drag-zone");
         const chosenItem = [];
 
-        draggables.forEach(draggable => {
-            draggable.addEventListener('dragstart', () => {
-                draggable.classList.add('dragging');
+        draggables.forEach((draggable) => {
+            draggable.addEventListener("dragstart", () => {
+                draggable.classList.add("dragging");
             });
-        
-            draggable.addEventListener('dragend', () => {
-                draggable.classList.remove('dragging');
+
+            draggable.addEventListener("dragend", () => {
+                draggable.classList.remove("dragging");
             });
         });
-        
-        containers.forEach(container => {
-            container.addEventListener('dragover', e => {
+
+        containers.forEach((container) => {
+            container.addEventListener("dragover", (e) => {
                 e.preventDefault();
-        
+
                 const afterElement = getDragAfterElement(container, e.clientY);
-                const draggable = document.querySelector('.dragging');
-                const count = container.querySelectorAll('.design__drag-item').length;
+                const draggable = document.querySelector(".dragging");
+                const count =
+                    container.querySelectorAll(".design__drag-item").length;
                 const isAlreadyInContainer = container.contains(draggable);
-            
-                if (!isAlreadyInContainer && afterElement == null && count < 3 && chosenItem.length < 3) {
+
+                if (
+                    !isAlreadyInContainer &&
+                    afterElement == null &&
+                    count < 3 &&
+                    chosenItem.length < 3
+                ) {
                     container.appendChild(draggable);
                     chosenItem.push(draggable);
-                } else if (!isAlreadyInContainer && count < 3 && chosenItem.length < 3) {
-                const item = container.insertBefore(draggable, afterElement);
-                chosenItem.push(item);
-                } else if (draggable.classList.contains('item') && isAlreadyInContainer) {
-                chosenItem.push(draggable);
+                } else if (
+                    !isAlreadyInContainer &&
+                    count < 3 &&
+                    chosenItem.length < 3
+                ) {
+                    const item = container.insertBefore(
+                        draggable,
+                        afterElement
+                    );
+                    chosenItem.push(item);
+                } else if (
+                    draggable.classList.contains("item") &&
+                    isAlreadyInContainer
+                ) {
+                    chosenItem.push(draggable);
                 }
-                
-                const altTexts = chosenItem.map(image => image.alt);
+
+                const altTexts = chosenItem.map((image) => image.alt);
                 // console.log(altTexts);
-                localStorage.setItem('altTexts', JSON.stringify(altTexts));
+                localStorage.setItem("altTexts", JSON.stringify(altTexts));
             });
         });
         function getDragAfterElement(container, y) {
-            const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
-            return draggableElements.reduce((closest, child) => {
-                const box = child.getBoundingClientRect()
-                const offset = y - box.top - box.height / 2
-                if (offset < 0 && offset > closest.offset) {
-                    return { offset: offset, element: child }
-                } else {
-                    return closest
-                }
-            }, { offset: Number.NEGATIVE_INFINITY }).element;
+            const draggableElements = [
+                ...container.querySelectorAll(".draggable:not(.dragging)"),
+            ];
+            return draggableElements.reduce(
+                (closest, child) => {
+                    const box = child.getBoundingClientRect();
+                    const offset = y - box.top - box.height / 2;
+                    if (offset < 0 && offset > closest.offset) {
+                        return { offset: offset, element: child };
+                    } else {
+                        return closest;
+                    }
+                },
+                { offset: Number.NEGATIVE_INFINITY }
+            ).element;
         }
     }
 }
-

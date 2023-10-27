@@ -13,7 +13,7 @@ export default class extends layout {
                 </div>
                 <div class="board__content">   
                     <div class="board__calculator-unit">
-                        <h1> 평 을 제곱미터로 바꾸기 </h1>
+                        <h2> 평 을 제곱미터로 바꾸기 </h2>
                         <label for="length-pyeong">평 수 입력하기 : </label>
                         <input type="number" id="autoInput" placeholder = "예 ) 25평이면 25 입력"><br>
                         
@@ -23,7 +23,7 @@ export default class extends layout {
                     </div>
                     <div class="board__calculator-price">
                         
-                        <h1> 공간의 규모를 알려주세요 </h1>
+                        <h2> 공간의 규모를 알려주세요 </h2>
                         
                         <div class = "board__calculator-flex">
                             <div class = "board__calculator-left">
@@ -52,7 +52,7 @@ export default class extends layout {
                         <input type="text" id="result" name="result" disabled>
                     </div>
                     <div class="board__deadline">
-                        <h1> 언제까지 필요한지 알려주세요 </h1>
+                        <h2> 언제까지 필요한지 알려주세요 </h2>
                         <label for="deadline">날짜 입력하기 : </label>
                         <input type="date" id="deadline" name="deadline"><br>
                     </div>

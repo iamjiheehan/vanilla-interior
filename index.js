@@ -43,11 +43,11 @@ const router = async () => {
         };
     }
     const pages = new match.route.pages(getParams(match));
-    
 
 
     document.querySelector("#app").innerHTML = await pages.getHTML();
     await pages.executeScript();
+    
 };
 
 window.addEventListener("popstate", router);

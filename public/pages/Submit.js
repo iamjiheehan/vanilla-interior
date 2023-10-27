@@ -10,7 +10,6 @@ export default class extends layout {
 
     async getHTML() {
         return `
-        
             <div class="submit">
                 <div id="myProgress">
                     <div class="progress__inner">
