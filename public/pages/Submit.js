@@ -7,7 +7,6 @@ export default class extends layout {
         this.setTitle("Submit");
     }
 
-
     async getHTML() {
         return `
             <div class="submit">
@@ -17,11 +16,11 @@ export default class extends layout {
                     </div>
                     <div id="myBar" style = "width : 100%"></div>
                 </div>
-                <h1>🎉That's all. Thank you!🎉</h1>
+                <h2 class="submit__title">🎉That's all. Thank you!🎉</h2>
                 <div class="submit__content">
                     <div class="submit__flex">
                         <div class="submit__content-left">
-                            <h1 class = "submit__content-title"> 입력한 정보 확인하기 </h1>
+                            <h2 class = "submit__content-title"> 입력한 정보 확인하기 </h2>
                             <h2> 선호하는 스타일 </h2>
                             <div id="preferred-style-image"></div>
                             <h3 class="submit__chosenItems submit__result"></h3>
@@ -33,7 +32,7 @@ export default class extends layout {
                             <h3 class="submit__price submit__result"></h3>
                         </div>
                         <div class="submit__content-right">
-                            <h1 class = "submit__content-title">Get in Touch</h1>
+                            <h2 class = "submit__content-title">Get in Touch</h2>
                             <form id="contact-form">
                                 <div class="submit__input-wrap">
                                     <div class="form__input-container">

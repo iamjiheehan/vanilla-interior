@@ -68,7 +68,8 @@ a, h3 {
     justify-content: space-between;
     align-items: center;
 
-    margin: auto 2rem;
+    /* margin: auto 2rem; */
+    margin: auto 6rem;
 }   
 
 .nav-flexbox {
@@ -202,6 +203,9 @@ z-index: 1;
 .design {
     background-color: var(--theme-font-color);
     height: 100vh;
+    margin: 0;
+    margin-top: 8rem;
+    margin-bottom: 7.3rem;
 
 }
 
@@ -213,7 +217,7 @@ z-index: 1;
 .design .design-title {
     font-family: 'English', sans-serif;
     margin: 0;
-    padding-top: 10rem;
+    padding-top: 6rem;
     padding-bottom: 2rem;
     color: #222222;
 }
@@ -278,6 +282,9 @@ z-index: 1;
 
 .board {
     height: 100vh;
+    margin: 0;
+    margin-top: 8rem;
+    margin-bottom: 7.3rem;
 }
 
 .board span {
@@ -306,7 +313,7 @@ z-index: 1;
 
 .board__calculator-unit{
     padding-bottom: 5rem;
-    padding-top : 12rem;
+    padding-top : 6rem;
 }
 
 .board__deadline {
@@ -364,20 +371,26 @@ z-index: 1;
 
 .progress__inner span {
     padding-right : 10px;
+
 }
 
 .submit {
     margin: 0;
+    margin-top : 8rem;
+    margin-bottom: 7.3rem;
 }
 
-.submit h2 {
-    margin: 0;
-    padding-top: 90px;
-    padding-bottom: 70px;
+.submit__title {
+    padding-top : 5rem;
+    padding-bottom : 1rem;
 }
 
 .submit__content-title {
-    background-color: #d8dee288;
+    border-bottom: 5px solid var(--theme-font-color);
+    /* background-color: var(--theme-font-color); */
+    padding: 1rem;
+    /* margin: 0; */
+    /* line-height: 27px; */
 }
 
 .submit__flex {
@@ -386,20 +399,28 @@ z-index: 1;
 }
 
 .submit__content-left, .submit__content-right {
-    border: 5px solid #d8dee288;
+    /* border: 5px solid var(--theme-font-color); */
 }
 
-.submit__content-left h2{
-    margin: 0;
+.submit__content-left h2, .submit__content-right h2{
+
     padding: 1rem;
+
+    /* margin: 0; */
+    /* background-color: gold; */
 }
 
 .submit__content-left h3{
-    margin: 0;
-    padding: 1rem;
-    background-color: #d8dee288;
+    border-bottom: 5px solid var(--theme-font-color);
 
-    
+    padding-bottom: 1rem;
+    /* background-color: var(--theme-font-color); */
+    margin: 0;
+    /* background-color: #2ecc71; */
+}
+
+#preferred-style-image {
+    margin: 1rem;
 }
 
 #preferred-style-image {
@@ -450,7 +471,7 @@ z-index: 1;
 
 .submit__input-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #attachment {
