@@ -58,8 +58,8 @@ a, h3 {
     z-index: 99;
 }
 
-.nav.on {
-    background: var(--theme-font-color);
+.nav .on {
+    /* background: var(--theme-font-color); */
 }
 
 .nav-wrap {
@@ -67,21 +67,22 @@ a, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto 4rem;
 
-    margin: auto 2rem;
 }   
 
 .nav-flexbox {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    width: 100%;
+    /* width: 100%; */
     gap: 3rem;
 }
 
 .nav__link {
     text-decoration: none;
     color: #f7f1e3;
+    font-family: 'English', sans-serif;
 }
 
 .nav__link.on {
@@ -96,7 +97,7 @@ color: #ffda79;
 
 
 nav img {
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     width: 200px;
     /* float: left; */
 }
@@ -104,13 +105,13 @@ nav img {
 /*-------------------------------------- App------------------------- */
 
 #app {
-text-align: center;
+    text-align: center;
 }
 
 /* ------------------------------------Buttons----------------------- */
 
 .button-wrapper {
-padding: 30px;
+    padding: 30px;
 }
 
 #next-btn {
@@ -220,7 +221,7 @@ z-index: 1;
 }
 
 .design__drag-border{
-    border: 8px solid #222222;
+    border: 5px solid #7f8c8d;
     padding: 2rem;
     margin: auto 6rem;
     border-radius: 20px;
@@ -381,19 +382,26 @@ z-index: 1;
     padding-top: 8rem;
 }
 
-.submit__content-right {
-    border-left : 2px solid var(--theme-font-color);
-    padding-left: 1rem;
-}
-
-.submit__content-left {
-    border-right : 2px solid var(--theme-font-color);
-}
 
 .submit__flex {
     display: flex;
     justify-content: center;
+    margin-top: 5rem;
 }
+
+.submit__content-right {
+    border-left : 2px solid var(--theme-font-color);
+    padding-left: 1rem;
+    flex: 1;
+
+}
+
+.submit__content-left {
+    border-right : 2px solid var(--theme-font-color);
+    flex: 1;
+
+}
+
 
 .submit__content-left h2{
     margin: 0;
@@ -410,19 +418,23 @@ z-index: 1;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
     margin: auto 2rem;
 
 }
 
+.submit__chosenItems {
+    font-family: 'English', sans-serif;
+}
+
 
 #preferred-style-image {
+    padding-bottom: 1rem;
     display: flex;
     justify-content: space-evenly;
 } 
 
 #preferred-style-image img {
-    max-width: 20%;
+    max-width: 25%;
 }
 
 #contact-form label { 
@@ -436,6 +448,7 @@ z-index: 1;
 
 #contact-form{
     padding-top : 45px;
+    margin: auto 2rem;
 }
 
 #contact-form input::placeholder,
@@ -469,7 +482,7 @@ z-index: 1;
 
 .submit__input-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #attachment {
