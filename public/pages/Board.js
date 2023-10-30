@@ -23,8 +23,7 @@ export default class extends layout {
                     </div>
                     <div class="board__calculator-price">
                         
-                        <h2> 공간의 규모를 알려주세요 </h2>
-                        
+                        <h2> 공간의 규모를 제곱미터로 알려주세요 </h2>
                         <div class = "board__calculator-flex">
                             <div class = "board__calculator-left">
                             <div>
@@ -44,7 +43,7 @@ export default class extends layout {
                             </div>
                         </div>
                         <div class="board__amountOfimgs">
-                            <label for="amount">필요한 이미지 수량 입력하기 :</label>
+                            <label for="amount">필요한 인테리어 가상 이미지 수량 입력하기 :</label>
                             <input type="number" id="amount" name="amount" placeholder = "숫자만 입력해주세요"><br>
         
                             <div class = "board__btn-wrap">

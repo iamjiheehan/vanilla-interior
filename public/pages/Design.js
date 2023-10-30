@@ -27,7 +27,7 @@ export default class extends layout {
                     <div class="design__drag-zone design__drag-border">
                         <div class = "design__drag-zone-text">
                             <h3><span>✔</span> 마음에 드는 스타일 3가지를 <br>여기에 넣어주세요</h3>
-                            <button class="reset-btn">Reset</button>
+                            <button class="reset-btn">다시 선택하기</button>
                         </div>
                     </div>
                 </div>
