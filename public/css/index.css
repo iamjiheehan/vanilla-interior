@@ -224,10 +224,8 @@ nav img {
     margin: 0;
     background-image: url(../img/background.jpg);
     background-size: 1950px;
-    background-position: -39px -796px;
-    /* 배경이미지 밝기조절 */
-    filter: brightness(70%);
-
+    background-position: -39px -484px;
+    filter: brightness(20%);
     /* background-size: cover; */
     background-repeat: no-repeat;
     height: 100vh;

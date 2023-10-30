@@ -104,12 +104,10 @@ export default class extends layout {
                 alert('이메일을 입력해주세요.');
                 return;
             }
-            // Send the form data to the server using AJAX or fetch API
             const successMessage = document.getElementById('success-message');
             successMessage.style.display = 'block';
         });
             function isValidEmail(email) {
-            // Use a regular expression to validate the email address
             const regex = /\S+@\S+\.\S+/;
             return regex.test(email);
         }
