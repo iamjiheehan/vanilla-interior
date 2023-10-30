@@ -13,7 +13,7 @@
     </head>
     <body>
         <nav class="nav">
-            <div class="menu-modal">
+            <div id="modal">
                 <a href="/" class="nav__link" data-link>홈</a>
                 <a href="/design" class="nav__link" data-link>디자인 고르기</a>
                 <a href="/board" class="nav__link" data-link>견적내기</a>
@@ -28,28 +28,18 @@
                     >
                     <a href="/board" class="nav__link" data-link>견적내기</a>
                     <a href="/submit" class="nav__link" data-link>문의하기</a>
-                    <i class="fa-solid fa-bars" style="color: #000000"></i>
+                    <i type="button" data-target="#modal" class="fa-solid fa-bars" style="color: #000000"></i>
                 </div>
             </div>
         </nav>
         <div id="app"></div>
         <script type="module" src="index.js"></script>
         <script>
-            const designLink = document.querySelector(".nav__link.next");
-            const elementsWithNavClass =
-                document.querySelectorAll(".nav__link");
-
-            designLink.addEventListener("click", (event) => {
-                event.preventDefault();
-                for (const element of elementsWithNavClass) {
-                    element.classList.add("on");
-                }
-
-                const modal = document.querySelector(".menu-modal");
-                modal.eventListener("click", (event) => {
-                    
+                const modal = document.querySelector("#modal");
+                const btn = document.querySelector(".fa-solid");
+                btn.addEventListener("click", (event) => {
+                    modal.classList.toggle("display");
                 });
-            });
         </script>
     </body>
 </html>
