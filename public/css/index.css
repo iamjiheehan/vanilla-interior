@@ -336,8 +336,15 @@ nav img {
 
 .design__drag-zone-text {
     width: 100%;
+    margin-bottom: 2rem
 }
 
+.design__btn-wrap {
+    display: flex;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
 /*---------------------------------------- Board 페이지 ----------------------------------------------------*/
 
 .board {
