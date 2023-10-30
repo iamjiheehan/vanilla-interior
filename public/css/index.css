@@ -503,7 +503,7 @@ hr {
 #preferred-style-image {
     padding-bottom: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #preferred-style-image img {
