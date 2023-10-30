@@ -94,7 +94,7 @@ export default class extends layout {
             }
         });
 
-        // 평수 계산기에서 계산한 값을 아래 input에도 입력
+        //가로세로 공간 혹은 전체공간 입력하는걸로 창 활성화하는 로직만들기
 
         // 예상견적
         const calculateBtn = document.querySelector(".board__caculate-btn");
