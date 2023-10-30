@@ -80,6 +80,8 @@ export default class extends layout {
         // 평 수 계산기
         const pyeongChange = document.getElementById("autoInput");
         const resultElement = document.querySelector(".board__calculator-unit-result");
+
+        const resultScale = document.getElementById("scale");
         
         pyeongChange.addEventListener("input", function() {
             const pyeongValue = parseFloat(pyeongChange.value);
@@ -88,8 +90,12 @@ export default class extends layout {
             } else {
                 const pyeongResult = (pyeongValue * 3.3058).toFixed(2) + "제곱미터 입니다.";
                 resultElement.textContent = pyeongResult;
+                resultScale.value = pyeongValue;
             }
         });
+
+        // 평수 계산기에서 계산한 값을 아래 input에도 입력
+
         // 예상견적
         const calculateBtn = document.querySelector(".board__caculate-btn");
         calculateBtn.addEventListener("click", calculate);
@@ -101,7 +107,7 @@ export default class extends layout {
 
             console.log(amount);
 
-            let area = 0; // declare area outside of the if block
+            let area = 0; 
 
             if (scale === ""){
               area = length * width * amount / 33.0579;
