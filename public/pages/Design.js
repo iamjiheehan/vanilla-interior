@@ -16,13 +16,13 @@ export default class extends layout {
                 <div class="design__img-wrap"> 
                     <div class="design__drag-zone">
                         <img class="design__drag-item" draggable="true" src="public/img/design-1.jpg" alt="Bohemian">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-2.jpg" alt="Mid Century Modern">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-3.jpg" alt="Scandinavian">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-4.jpg" alt="Industrial">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-5.jpg" alt="Preppy">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-6.jpg" alt="Rustic">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-7.jpg" alt="Minimal">
-                        <img class="design__drag-item" draggable="true" src="public/img/design-8.jpg" alt="Glam">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-2.jpg" alt="Tropical">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-3.jpg" alt="Elegant">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-4.jpg" alt="Plant friendly">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-5.jpg" alt="Wooden">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-6.jpg" alt="Dark">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-7.jpg" alt="Cozy">
+                        <img class="design__drag-item" draggable="true" src="public/img/design-8.jpg" alt="Simple">
                     </div>
                     <div class="design__drag-zone design__drag-border">
                         <div class = "design__drag-zone-text">

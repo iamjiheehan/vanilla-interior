@@ -172,11 +172,12 @@ z-index: 1;
 .home-img {
     margin: 0;
     background-image: url(../img/background.jpg);
-
+    background-size: 1950px;
+    background-position: -39px -796px;
     /* 배경이미지 밝기조절 */
     filter: brightness(70%);
-    background-position: 0rem;
-    background-size: cover;
+
+    /* background-size: cover; */
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
@@ -189,7 +190,7 @@ z-index: 1;
     /* background-color: rgba(255, 255, 255, 0.623); */
     padding: 20px 100px;
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top : 130px;
@@ -202,7 +203,7 @@ z-index: 1;
 .design {
     background-color: var(--theme-font-color);
     height: 100vh;
-
+    padding-top : 8rem;
 }
 
 .design #next-btn {
@@ -213,7 +214,7 @@ z-index: 1;
 .design .design-title {
     font-family: 'English', sans-serif;
     margin: 0;
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-bottom: 2rem;
     color: #222222;
 }
@@ -248,8 +249,10 @@ z-index: 1;
 }
 
 .design__drag-zone img {
+    object-fit: cover;
     border-radius: 50px;
     max-width: 20%;
+    max-height: 300px;
     flex-basis: 20%;
     padding: 10px;
     /* background-color: white; */
@@ -278,6 +281,7 @@ z-index: 1;
 
 .board {
     height: 100vh;
+    padding-top : 8rem;
 }
 
 .board span {
@@ -306,7 +310,7 @@ z-index: 1;
 
 .board__calculator-unit{
     padding-bottom: 5rem;
-    padding-top : 12rem;
+    padding-top : 8rem;
 }
 
 .board__deadline {
@@ -360,6 +364,7 @@ z-index: 1;
     position: absolute;
     z-index: 2;
     right: 0;
+    padding-top: 3px;
 }
 
 .progress__inner span {
@@ -368,16 +373,21 @@ z-index: 1;
 
 .submit {
     margin: 0;
+    margin-top: 8rem;
 }
 
-.submit h2 {
-    margin: 0;
-    padding-top: 90px;
-    padding-bottom: 70px;
+
+.submit__content {
+    padding-top: 8rem;
 }
 
-.submit__content-title {
-    background-color: #d8dee288;
+.submit__content-right {
+    border-left : 2px solid var(--theme-font-color);
+    padding-left: 1rem;
+}
+
+.submit__content-left {
+    border-right : 2px solid var(--theme-font-color);
 }
 
 .submit__flex {
@@ -385,27 +395,35 @@ z-index: 1;
     justify-content: center;
 }
 
-.submit__content-left, .submit__content-right {
-    border: 5px solid #d8dee288;
-}
-
 .submit__content-left h2{
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .submit__content-left h3{
     margin: 0;
     padding: 1rem;
-    background-color: #d8dee288;
-
-    
 }
+
+.submit__result_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: auto 2rem;
+
+}
+
 
 #preferred-style-image {
     display: flex;
     justify-content: space-evenly;
 } 
+
+#preferred-style-image img {
+    max-width: 20%;
+}
 
 #contact-form label { 
     text-align: left;
@@ -445,7 +463,8 @@ z-index: 1;
     font-size: 12px;
     color: red;
     text-align: left;
-    margin: 0 20px;
+    margin: 0.5rem 20px;
+    font-family: 'Korean', sans-serif;
 }
 
 .submit__input-wrap {

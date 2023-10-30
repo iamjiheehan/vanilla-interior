@@ -17,23 +17,28 @@ export default class extends layout {
                     </div>
                     <div id="myBar" style = "width : 100%"></div>
                 </div>
-                <h1>🎉That's all. Thank you!🎉</h1>
                 <div class="submit__content">
                     <div class="submit__flex">
                         <div class="submit__content-left">
-                            <h1 class = "submit__content-title"> 입력한 정보 확인하기 </h1>
+                            <h2 class = "submit__content-title"> 입력한 정보 확인하기 </h2>
                             <h2> 선호하는 스타일 </h2>
                             <div id="preferred-style-image"></div>
                             <h3 class="submit__chosenItems submit__result"></h3>
-                            <h2> 공간 크기 </h2>
-                            <h3 class="submit__scale submit__result"></h3>
-                            <h2> 필요한 날짜 </h2>
-                            <h3 class="submit__deadline submit__result"></h3>
-                            <h2> 견적 금액 </h2>
-                            <h3 class="submit__price submit__result"></h3>
+                            <div class="submit__result_wrap">
+                                <h2> 공간 크기 </h2>
+                                <h3 class="submit__scale submit__result"></h3>
+                            </div>
+                            <div class="submit__result_wrap">
+                                <h2> 필요한 날짜 </h2>
+                                <h3 class="submit__deadline submit__result"></h3>
+                            </div>
+                            <div class="submit__result_wrap">
+                                <h2> 견적 금액 </h2>
+                                <h3 class="submit__price submit__result"></h3>
+                            </div>
                         </div>
                         <div class="submit__content-right">
-                            <h1 class = "submit__content-title">Get in Touch</h1>
+                            <h2 class = "submit__content-title">Get in Touch</h2>
                             <form id="contact-form">
                                 <div class="submit__input-wrap">
                                     <div class="form__input-container">
@@ -142,13 +147,13 @@ export default class extends layout {
 
         const images = [
             {src: "public/img/design-1.jpg", alt: "Bohemian"},
-            {src: "public/img/design-2.jpg", alt: "Mid Century Modern"},
-            {src: "public/img/design-3.jpg", alt: "Scandinavian"},
-            {src: "public/img/design-4.jpg", alt: "Industrial"},
-            {src: "public/img/design-5.jpg", alt: "Preppy"},
-            {src: "public/img/design-6.jpg", alt: "Rustic"},
-            {src: "public/img/design-7.jpg", alt: "Minimal"},
-            {src: "public/img/design-8.jpg", alt: "Glam"}
+            {src: "public/img/design-2.jpg", alt: "Tropical"},
+            {src: "public/img/design-3.jpg", alt: "Elegant"},
+            {src: "public/img/design-4.jpg", alt: "Plant friendly"},
+            {src: "public/img/design-5.jpg", alt: "Wooden"},
+            {src: "public/img/design-6.jpg", alt: "Dark"},
+            {src: "public/img/design-7.jpg", alt: "Cozy"},
+            {src: "public/img/design-8.jpg", alt: "Simple"}
         ];
 
         const matchingImages = images.filter(img => altTexts.includes(img.alt));
