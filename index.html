@@ -6,37 +6,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vinterior</title>
         <link rel="stylesheet" href="./public/css/index.css" />
-        <script src="https://kit.fontawesome.com/adefc81edf.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/adefc81edf.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
-        <nav class="nav on">
+        <nav class="nav">
+            <div class="menu-modal">
+                <a href="/" class="nav__link" data-link>홈</a>
+                <a href="/design" class="nav__link" data-link>디자인 고르기</a>
+                <a href="/board" class="nav__link" data-link>견적내기</a>
+                <a href="/submit" class="nav__link" data-link>문의하기</a>
+            </div>
             <div class="nav-wrap">
                 <img src="./public/img/logo.png" alt="logo" />
                 <div class="nav-flexbox">
-                    <a href="/" class="nav__link on" data-link>홈</a>
-                    <a href="/design" class="nav__link on" data-link
+                    <a href="/" class="nav__link" data-link>홈</a>
+                    <a href="/design" class="nav__link" data-link
                         >디자인 고르기</a
                     >
-                    <a href="/board" class="nav__link on" data-link>견적내기</a>
-                    <a href="/submit" class="nav__link on" data-link
-                        >문의하기</a
-                    >
-                    <i class="fa-solid fa-bars" style="color: #000000;"></i>
+                    <a href="/board" class="nav__link" data-link>견적내기</a>
+                    <a href="/submit" class="nav__link" data-link>문의하기</a>
+                    <i class="fa-solid fa-bars" style="color: #000000"></i>
                 </div>
             </div>
         </nav>
         <div id="app"></div>
         <script type="module" src="index.js"></script>
-        <!-- <script>
-        const designLink = document.querySelector(".nav__link.next");
-        const elementsWithNavClass = document.querySelectorAll('.nav__link');
+        <script>
+            const designLink = document.querySelector(".nav__link.next");
+            const elementsWithNavClass =
+                document.querySelectorAll(".nav__link");
 
-        designLink.addEventListener("click", (event) => {
-            event.preventDefault();
-            for (const element of elementsWithNavClass) {
-                element.classList.add("on");
-            }
-        });
-    </script> -->
+            designLink.addEventListener("click", (event) => {
+                event.preventDefault();
+                for (const element of elementsWithNavClass) {
+                    element.classList.add("on");
+                }
+
+                const modal = document.querySelector(".menu-modal");
+                modal.eventListener("click", (event) => {
+                    
+                });
+            });
+        </script>
     </body>
 </html>

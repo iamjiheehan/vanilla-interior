@@ -67,9 +67,6 @@ h3 {
     font-weight: 500;
 }
 
-i {
-    display: none !important;
-}
 
 i:hover, button:hover {
     cursor: pointer;
@@ -85,9 +82,6 @@ i:hover, button:hover {
     text-align: center;
     position: fixed;
     z-index: 99;
-}
-
-.nav.on {
     background: var(--theme-font-color);
 }
 
@@ -97,6 +91,23 @@ i:hover, button:hover {
     justify-content: space-between;
     align-items: center;
     margin: auto 4rem;
+    position: relative;
+}
+
+.menu-modal {
+    width: 15rem;
+    height: 16rem;
+    top: 8rem;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--theme-font-color);
+
+    padding: 1rem 4rem 1rem 1rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-end
 }
 
 .nav-flexbox {
@@ -110,11 +121,11 @@ i:hover, button:hover {
 .nav__link {
     text-decoration: none;
     color: #f7f1e3;
+    z-index: 10;
+    color: #222222;
+
 }
 
-.nav__link.on {
-    color: #222222;
-}
 
 .nav__link:hover {
     /* color: burlywood; */
@@ -126,6 +137,8 @@ nav img {
     width: 200px;
     /* float: left; */
 }
+
+
 
 /*-------------------------------------- App------------------------- */
 
