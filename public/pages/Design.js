@@ -14,7 +14,7 @@ export default class extends layout {
                 </div>
                 <h2 class="design-title">선호하는 스타일을 골라보세요</h2>
                 <div class="design__img-wrap"> 
-                    <div class="design__drag-zone">
+                    <div class="design__drag-zone design__drag-img">
                         <img class="design__drag-item" draggable="true" src="public/img/design-1.jpg" alt="Bohemian">
                         <img class="design__drag-item" draggable="true" src="public/img/design-2.jpg" alt="Tropical">
                         <img class="design__drag-item" draggable="true" src="public/img/design-3.jpg" alt="Elegant">
@@ -26,7 +26,7 @@ export default class extends layout {
                     </div>
                     <div class="design__drag-zone design__drag-border">
                         <div class = "design__drag-zone-text">
-                            <h2><span>✔</span> 마음에 드는 스타일 3가지를 여기에 넣어주세요</h2>
+                            <h3><span>✔</span> 마음에 드는 스타일 3가지를 <br>여기에 넣어주세요</h3>
                             <button class="reset-btn">Reset</button>
                         </div>
                     </div>

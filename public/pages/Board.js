@@ -27,11 +27,14 @@ export default class extends layout {
                         
                         <div class = "board__calculator-flex">
                             <div class = "board__calculator-left">
+                            <div>
                                 <label for="length">공간의 가로 길이 입력하기 : </label>
                                 <input type="number" id="width" name="length" placeholder = "제곱미터로 입력하기"><br>
-                            
+                            </div>
+                            <div>
                                 <label for="width">공간의 세로 길이 입력하기 : </label>
                                 <input type="number" id="length" name="width" placeholder = "예 ) 25㎡이면 25 입력"><br>
+                                </div>
                             </div>
                             <div class = "board__calculator-line"></div>
 

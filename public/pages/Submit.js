@@ -25,15 +25,15 @@ export default class extends layout {
                             <div id="preferred-style-image"></div>
                             <h3 class="submit__chosenItems submit__result"></h3>
                             <div class="submit__result_wrap">
-                                <h2> 공간 크기 </h2>
+                                <h3> 공간 크기 </h3>
                                 <h3 class="submit__scale submit__result"></h3>
                             </div>
                             <div class="submit__result_wrap">
-                                <h2> 필요한 날짜 </h2>
+                                <h3> 필요한 날짜 </h3>
                                 <h3 class="submit__deadline submit__result"></h3>
                             </div>
                             <div class="submit__result_wrap">
-                                <h2> 견적 금액 </h2>
+                                <h3> 견적 금액 </h3>
                                 <h3 class="submit__price submit__result"></h3>
                             </div>
                         </div>
