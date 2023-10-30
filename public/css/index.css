@@ -4,35 +4,39 @@
     --theme-btn-color: #ccae62;
 }
 
-
 /* Fonts */
 @font-face {
-    font-family: 'English';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-family: "English";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+        format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Korean';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-family: "Korean";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 /* --------------------------------General --------------------------------*/
 
-body{
+body {
     margin: 0 0 0 var(--nav-width);
-    font-family: 'English', sans-serif;
+    font-family: "English", sans-serif;
     font-size: 18px;
+    min-width: 320px;
 }
 
-#autoInput, #length, #width, input{
+#autoInput,
+#length,
+#width,
+input {
     background: transparent;
-    border-top : none;
-    border-right : none;
-    border-left : none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
 
 h1 {
@@ -40,10 +44,19 @@ h1 {
     margin-top: 3rem;
 }
 
-a, h3 {
-    letter-spacing : 2px;
-    font-family: 'Korean', sans-serif;
+a,
+h3 {
+    letter-spacing: 2px;
+    font-family: "Korean", sans-serif;
     font-weight: 500;
+}
+
+i {
+    display: none !important;
+}
+
+i:hover {
+    cursor: pointer;
 }
 /* ------------------------------------Navigation ------------------------*/
 
@@ -68,8 +81,7 @@ a, h3 {
     justify-content: space-between;
     align-items: center;
     margin: auto 4rem;
-
-}   
+}
 
 .nav-flexbox {
     display: flex;
@@ -82,19 +94,17 @@ a, h3 {
 .nav__link {
     text-decoration: none;
     color: #f7f1e3;
-    font-family: 'English', sans-serif;
+    font-family: "English", sans-serif;
 }
 
 .nav__link.on {
     color: #222222;
 }
 
-
 .nav__link:hover {
-/* color: burlywood; */
-color: #ffda79;
+    /* color: burlywood; */
+    color: #ffda79;
 }
-
 
 nav img {
     /* flex-shrink: 0; */
@@ -126,9 +136,10 @@ nav img {
     font-weight: 600;
 }
 
-.reset-btn, .board__caculate-btn {
+.reset-btn,
+.board__caculate-btn {
     text-decoration: none;
-    background-color : #3e8e41;
+    background-color: #3e8e41;
     border: none;
     padding: 15px 40px;
     margin-bottom: 20px;
@@ -138,11 +149,11 @@ nav img {
     font-weight: 600;
 }
 
-.reset-btn:hover, #next-btn:hover {
+.reset-btn:hover,
+#next-btn:hover {
     opacity: 80%;
     cursor: pointer;
 }
-
 
 /* -------------------------Progress Bar------------------------------------ */
 
@@ -155,20 +166,18 @@ nav img {
 }
 
 #myBar {
-position: absolute;
-height: 100%;
-background-color: #ffda79;
-z-index: 1;
+    position: absolute;
+    height: 100%;
+    background-color: #ffda79;
+    z-index: 1;
 }
 
 /* ----------------------------------------------메인페이지 --------------------------------------*/
-
 
 .home button {
     background: none;
     border: none;
 }
-
 
 .home-img {
     margin: 0;
@@ -194,17 +203,16 @@ z-index: 1;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top : 130px;
+    margin-top: 130px;
     color: #f7f1e3;
 }
-
 
 /* -------------------------------Design 페이지 ---------------------------------*/
 
 .design {
     background-color: var(--theme-font-color);
     height: 100vh;
-    padding-top : 8rem;
+    padding-top: 8rem;
 }
 
 .design #next-btn {
@@ -213,19 +221,18 @@ z-index: 1;
 }
 
 .design .design-title {
-    font-family: 'English', sans-serif;
+    font-family: "English", sans-serif;
     margin: 0;
     padding-top: 8rem;
     padding-bottom: 2rem;
     color: #222222;
 }
 
-.design__drag-border{
+.design__drag-border {
     border: 5px solid #7f8c8d;
     padding: 2rem;
     margin: auto 6rem;
     border-radius: 20px;
-
 }
 
 .design__img-wrap {
@@ -238,7 +245,7 @@ z-index: 1;
 }
 
 .design__drag-item.dragging {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .design__drag-zone {
@@ -263,10 +270,10 @@ z-index: 1;
 
 .design__drag-zone-text h2 {
     color: #222222;
-
 }
 
-.design__drag-zone-text span, .progress__inner span {
+.design__drag-zone-text span,
+.progress__inner span {
     color: #2ecc71;
 }
 
@@ -274,15 +281,11 @@ z-index: 1;
     width: 100%;
 }
 
-
-
-
 /*---------------------------------------- Board 페이지 ----------------------------------------------------*/
-
 
 .board {
     height: 100vh;
-    padding-top : 8rem;
+    padding-top: 8rem;
 }
 
 .board span {
@@ -308,22 +311,20 @@ z-index: 1;
     justify-content: space-around;
 }
 
-
-.board__calculator-unit{
+.board__calculator-unit {
     padding-bottom: 5rem;
-    padding-top : 8rem;
+    padding-top: 8rem;
 }
 
 .board__deadline {
-    padding-top : 5rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 .board__calculator-price {
-    background-color : var(--theme-font-color);
+    background-color: var(--theme-font-color);
     padding-bottom: 20px;
-    padding-top : 20px;
-
+    padding-top: 20px;
 }
 
 .board__calculator-flex {
@@ -341,15 +342,15 @@ z-index: 1;
     align-items: end;
     bottom: 0;
     justify-content: space-around;
-    padding-top : 20px;
-    padding-bottom : 5rem;
+    padding-top: 20px;
+    padding-bottom: 5rem;
 }
 
-.board__calculator-right, .board__calculator-left {
+.board__calculator-right,
+.board__calculator-left {
     padding: 20px;
     margin-bottom: 20px;
 }
-
 
 .board__calculator-line {
     border: none;
@@ -360,7 +361,6 @@ z-index: 1;
 
 /* ------------------------------------Submit페이지 -----------------------------*/
 
-
 .progress__inner {
     position: absolute;
     z-index: 2;
@@ -369,7 +369,7 @@ z-index: 1;
 }
 
 .progress__inner span {
-    padding-right : 10px;
+    padding-right: 10px;
 }
 
 .submit {
@@ -377,11 +377,9 @@ z-index: 1;
     margin-top: 8rem;
 }
 
-
 .submit__content {
     padding-top: 8rem;
 }
-
 
 .submit__flex {
     display: flex;
@@ -390,25 +388,22 @@ z-index: 1;
 }
 
 .submit__content-right {
-    border-left : 2px solid var(--theme-font-color);
+    border-left: 2px solid var(--theme-font-color);
     padding-left: 1rem;
     flex: 1;
-
 }
 
 .submit__content-left {
-    border-right : 2px solid var(--theme-font-color);
+    border-right: 2px solid var(--theme-font-color);
     flex: 1;
-
 }
 
-
-.submit__content-left h2{
+.submit__content-left h2 {
     margin: 0;
     padding: 2rem;
 }
 
-.submit__content-left h3{
+.submit__content-left h3 {
     margin: 0;
     padding: 1rem;
 }
@@ -419,25 +414,23 @@ z-index: 1;
     align-items: center;
     justify-content: space-between;
     margin: auto 2rem;
-
 }
 
 .submit__chosenItems {
-    font-family: 'English', sans-serif;
+    font-family: "English", sans-serif;
 }
-
 
 #preferred-style-image {
     padding-bottom: 1rem;
     display: flex;
     justify-content: space-evenly;
-} 
+}
 
 #preferred-style-image img {
     max-width: 25%;
 }
 
-#contact-form label { 
+#contact-form label {
     text-align: left;
 }
 
@@ -446,8 +439,8 @@ z-index: 1;
     height: 200px;
 }
 
-#contact-form{
-    padding-top : 45px;
+#contact-form {
+    padding-top: 45px;
     margin: auto 2rem;
 }
 
@@ -477,7 +470,7 @@ z-index: 1;
     color: red;
     text-align: left;
     margin: 0.5rem 20px;
-    font-family: 'Korean', sans-serif;
+    font-family: "Korean", sans-serif;
 }
 
 .submit__input-wrap {
@@ -490,7 +483,7 @@ z-index: 1;
 }
 
 .submit__button-wrap {
-    margin : 20px;
+    margin: 20px;
     float: right;
 }
 
@@ -499,45 +492,46 @@ z-index: 1;
     text-align: right;
 }
 
-
-
 /*------------------------------------- Media Queries------------------ */
-/* 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
-    
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .home-box {
         padding: 10px;
     }
 
     #preferred-style-image {
-        display: flex; 
-        flex-wrap: wrap
+        display: flex;
+        flex-wrap: wrap;
     }
-    
-    .board__btn-flex  {
+
+    .board__btn-flex {
         display: inline-flex;
     }
 
-    .submit__content-left, .submit__content-right {
+    .submit__content-left,
+    .submit__content-right {
         border: none;
     }
 
     .submit__input-wrap {
         display: block;
     }
+    
     .msg-btn {
         margin-top: 14px;
     }
 
-    .reset-btn, .board__caculate-btn {
-        margin: 0 30px;   
+    .reset-btn,
+    .board__caculate-btn {
+        margin: 0 30px;
     }
-
 }
 
+.fa-solid fa-bars {
+    width: 200px;
+}
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+
     .nav {
         width: 100%;
         height: 130px;
@@ -552,18 +546,26 @@ z-index: 1;
         padding: 12px;
     }
 
-    h1 {
-        font-size: 30px;
-        margin: 0.5rem;
+    i {
+        display: inline-block !important;
     }
 
-    h2 {
-        font-size: 20px;
+    .nav-flexbox {
+        display: inline-block;
     }
 
-    h3 {
-        font-size: 18px;
+    .nav-flexbox .on {
+        display: none !important;
     }
+
+    .nav__link {
+        display: none !important;
+    }
+
+    .nav__link .on {
+        display: inline-block !important;
+    }
+
     body {
         --nav-width: auto;
     }
@@ -576,39 +578,25 @@ z-index: 1;
         top: 8rem;
     }
 
-
     .home-background {
         background-position: center;
     }
     .home-box {
-        margin-top : 130px;
+        margin-top: 130px;
         padding: 10px;
     }
 
-    .design {
-        margin-top: 130px;
-    }
-
-    .design__drag-zone {
-        padding: 1rem;
-    }
-
-    .design__drag-zone img {
+    .design__drag-item {
         padding: 0;
-        max-width: 30%;
+        width: 45%;
     }
 
-    .board__btn-flex  {
+    .board__btn-flex {
         display: inline-flex;
     }
 
     #next-btn {
         margin-right: 2px;
-    }
-
-    .board__calculator-unit {
-        margin-top: 150px;
-
     }
 
     .board__calculator-flex {
@@ -617,16 +605,15 @@ z-index: 1;
     }
 
     .board__calculator-line {
-        border: none;
-        border-left: 5px solid white;
-        height: 80px;
-        transform: rotate(90deg);
+        border-bottom: 5px solid white;
+        height: 2px;
+        width: 90%;
         margin: 0;
     }
 
     .board__deadline {
         padding-bottom: 0;
-    } 
+    }
 
     .submit {
         margin-top: 144px;
@@ -634,47 +621,39 @@ z-index: 1;
     .submit__flex {
         display: block;
     }
-    .submit h1  {
+    .submit h1 {
         margin-top: 1rem;
         padding-top: 30px;
         padding-bottom: 30px;
     }
+
+    button.reset-btn.msg-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+
+
+
     #preferred-style-image {
-        display : flex;
+        display: flex;
         flex-direction: column;
+        gap: 1rem;
+        margin: 2rem;
+    }
+
+    #preferred-style-image img {
+        max-width: 100%;
     }
 
     button.reset-btn.msg-btn {
         display: block;
     }
-} 
 
-@media screen and (max-width: 480px) and (min-width: 320px){
-    .nav a {
-        display: inline;
-        text-align: center;
-        padding: 6px;
-    }
-
-    h1 {
-        font-size: 20px;
-        margin: 0.5rem;
-    }
-
-    h2 {
-        font-size: 15px;
-    }
-
-    h3 {
-        font-size: 15px;
-    }
-
-    #preferred-style-image {
-        display : flex;
+    .submit__input-wrap {
+        display: flex;
+        justify-content: space-between;
         flex-direction: column;
     }
-    
-    button.reset-btn.msg-btn {
-        display: block;
-    }
-} */
+}
