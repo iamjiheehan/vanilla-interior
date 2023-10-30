@@ -37,6 +37,7 @@ export default class extends layout {
                                 <h3 class="submit__price submit__result"></h3>
                             </div>
                         </div>
+                        <hr />
                         <div class="submit__content-right">
                             <h2 class = "submit__content-title">Get in Touch</h2>
                             <form id="contact-form">
