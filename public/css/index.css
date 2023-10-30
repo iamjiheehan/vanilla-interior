@@ -68,7 +68,8 @@ a, h3 {
     justify-content: space-between;
     align-items: center;
 
-    margin: auto 2rem;
+    /* margin: auto 2rem; */
+    margin: auto 6rem;
 }   
 
 .nav-flexbox {
@@ -203,7 +204,7 @@ z-index: 1;
 .design {
     background-color: var(--theme-font-color);
     height: 100vh;
-    padding-top : 8rem;
+
 }
 
 .design #next-btn {
@@ -214,7 +215,7 @@ z-index: 1;
 .design .design-title {
     font-family: 'English', sans-serif;
     margin: 0;
-    padding-top: 8rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
     color: #222222;
 }
@@ -281,7 +282,6 @@ z-index: 1;
 
 .board {
     height: 100vh;
-    padding-top : 8rem;
 }
 
 .board span {
@@ -310,7 +310,7 @@ z-index: 1;
 
 .board__calculator-unit{
     padding-bottom: 5rem;
-    padding-top : 8rem;
+    padding-top : 12rem;
 }
 
 .board__deadline {
@@ -369,25 +369,21 @@ z-index: 1;
 
 .progress__inner span {
     padding-right : 10px;
+
 }
 
 .submit {
     margin: 0;
-    margin-top: 8rem;
 }
 
-
-.submit__content {
-    padding-top: 8rem;
+.submit h2 {
+    margin: 0;
+    padding-top: 90px;
+    padding-bottom: 70px;
 }
 
-.submit__content-right {
-    border-left : 2px solid var(--theme-font-color);
-    padding-left: 1rem;
-}
-
-.submit__content-left {
-    border-right : 2px solid var(--theme-font-color);
+.submit__content-title {
+    background-color: #d8dee288;
 }
 
 .submit__flex {
@@ -395,26 +391,26 @@ z-index: 1;
     justify-content: center;
 }
 
-.submit__content-left h2{
-    margin: 0;
-    padding: 2rem;
+.submit__content-left, .submit__content-right {
+    border: 5px solid #d8dee288;
 }
 
-.submit__content-left h3{
+.submit__content-left h2{
     margin: 0;
     padding: 1rem;
 }
 
-.submit__result_wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.submit__content-left h3{
+    border-bottom: 5px solid var(--theme-font-color);
 
-    margin: auto 2rem;
+    padding-bottom: 1rem;
+    /* background-color: var(--theme-font-color); */
+    margin: 0;
+    padding: 1rem;
+    background-color: #d8dee288;
 
+    
 }
-
 
 #preferred-style-image {
     display: flex;
@@ -469,7 +465,7 @@ z-index: 1;
 
 .submit__input-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #attachment {

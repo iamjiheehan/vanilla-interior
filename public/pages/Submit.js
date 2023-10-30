@@ -7,7 +7,6 @@ export default class extends layout {
         this.setTitle("Submit");
     }
 
-
     async getHTML() {
         return `
             <div class="submit">
@@ -17,6 +16,10 @@ export default class extends layout {
                     </div>
                     <div id="myBar" style = "width : 100%"></div>
                 </div>
+<<<<<<< HEAD
+=======
+                <h2 class="submit__title">🎉That's all. Thank you!🎉</h2>
+>>>>>>> 153be47c0731f40f5d35c0fbe7a3f378b43f19f6
                 <div class="submit__content">
                     <div class="submit__flex">
                         <div class="submit__content-left">
