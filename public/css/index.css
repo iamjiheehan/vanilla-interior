@@ -58,8 +58,8 @@ a, h3 {
     z-index: 99;
 }
 
-.nav .on {
-    /* background: var(--theme-font-color); */
+.nav.on {
+    background: var(--theme-font-color);
 }
 
 .nav-wrap {

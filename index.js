@@ -16,6 +16,7 @@ const getParams = match => {
 
 const navigateTo = url => {
     history.pushState(null, null, url);
+    window.scrollTo(0, 0);
     router();
 }
 
