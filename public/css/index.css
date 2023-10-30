@@ -67,7 +67,7 @@ h3 {
     font-weight: 500;
 }
 
-i {
+nav i {
     display: none !important;
 }
 
@@ -210,7 +210,7 @@ nav img {
     position: absolute;
     height: 100%;
     background-color: #ffda79;
-    z-index: 1;
+    z-index: 999;
 }
 
 /* ----------------------------------------------메인페이지 --------------------------------------*/
@@ -374,21 +374,24 @@ nav img {
     justify-content: space-around;
 }
 
-.board__calculator-unit {
-    padding-bottom: 5rem;
-    padding-top: 8rem;
-}
-
 .board__deadline {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 .board__calculator-price {
+    padding-bottom: 5rem;
+    padding-top: 6rem;
+}
+
+
+.board__calculator-unit {
     background-color: var(--theme-font-color);
+
     padding-bottom: 5rem;
     padding-top: 5rem;
 }
+
 
 .board__calculator-flex {
     display: flex;
@@ -421,12 +424,16 @@ nav img {
     gap: 3rem;
 }
 
-.board__calculator-line {
+.board__calculator-unit-result {
+    color: red;
+}
+
+/* .board__calculator-line {
     border: none;
     border-left: 5px solid white;
     height: 180px;
     margin: 0px 20px;
-}
+} */
 
 /* ------------------------------------Submit페이지 -----------------------------*/
 
@@ -445,7 +452,7 @@ nav img {
 hr {
     margin-top: 5rem;
     border: 2px solid var(--theme-font-color);
-    height: 50rem;
+    height: 38rem;
     width: 2px;
 }
 
@@ -660,6 +667,7 @@ hr {
 
     #myProgress {
         top: 8rem;
+        z-index: 999;
     }
 
     .home-background {
@@ -678,6 +686,10 @@ hr {
 
     .board__btn-flex {
         display: inline-flex;
+    }
+
+    .board__modal {
+        z-index: -1;
     }
 
     #next-btn {
