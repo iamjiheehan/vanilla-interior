@@ -21,15 +21,8 @@
 - ### 문의하기</br>
    - ##### 선택 사항 확인 및 이메일 보내기
 
-## 🌍 미리보기
 ### 배포 URL : https://jihee-vinterior.netlify.app/
  ###  목적 : 바닐라 자바스크립트만으로 구성된 SPA 웹사이트 구현
-
-![choosing](https://user-images.githubusercontent.com/102779433/231810527-e6af320c-bdd1-4972-bb66-c8d7e81fb732.gif)
-
-![sizing](https://user-images.githubusercontent.com/102779433/231810553-15af784a-2387-4145-92ea-2200a0756bae.gif)
-
-![last](https://user-images.githubusercontent.com/102779433/231810572-1d4e44db-b073-429f-891c-21934e67c0fd.gif)
 
 ___
 
