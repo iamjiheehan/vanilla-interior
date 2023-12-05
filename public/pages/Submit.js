@@ -1,12 +1,10 @@
 import layout from "./layout.js";
 
-
 export default class extends layout {
     constructor(params) {
         super(params);
         this.setTitle("Submit");
     }
-
 
     async getHTML() {
         return `

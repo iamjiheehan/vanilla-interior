@@ -86,8 +86,6 @@ export default class extends layout {
             }
         });
         
-
-
         // 예상견적
         const scaleInput = document.getElementById("scale");
         const amountInput = document.getElementById("amount");
@@ -135,8 +133,7 @@ export default class extends layout {
         const today = new Date().toISOString().split("T")[0];
         deadlineInput.setAttribute("min", today);
 
-
-        //납품날짜  값 전달
+        //납품날짜 값 전달
         const deadline = document.getElementById("deadline");
         deadline.addEventListener("input", function() {
             const deadlineValue = deadline.value;
